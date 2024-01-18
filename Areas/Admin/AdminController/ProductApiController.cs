@@ -41,42 +41,42 @@ namespace Booking.Areas.Admin.AdminController
             return StatusCode(500, "Internal Server Error");
         }
 
-        // [HttpDelete("delete/{productId}")]
-        // public async Task<IActionResult> DeleteProductsAsync(int productId) 
-        // {
-        //     var result = await _productService.DeleteProductAsync(productId);
+        [HttpDelete("delete/{productId}")]
+        public async Task<IActionResult> DeleteProductsAsync(int productId) 
+        {
+            var result = await _productService.DeleteProductAsync(productId);
 
-        //     if (result is OkObjectResult okResult)
-        //     {
-        //         return Ok(okResult.Value);
-        //     }
-        //     else if (result is NotFoundObjectResult notFoundResult)
-        //     {
-        //         return NotFound(notFoundResult.Value);
-        //     }
-        //     else
-        //     {
-        //         return StatusCode(500, "Internal Server Error");
-        //     }
-        // }
+            if (result is OkObjectResult okResult)
+            {
+                return Ok(okResult.Value);
+            }
+            else if (result is NotFoundObjectResult notFoundResult)
+            {
+                return NotFound(notFoundResult.Value);
+            }
+            else
+            {
+                return StatusCode(500, "Internal Server Error");
+            }
+        }
 
-        //  [HttpPut("delete/{productId}")]
-        // public async Task<IActionResult> UpdateProductsAsync(int productId, Product updateModel) 
-        // {
-        //     var result = await _productService.UpdateProductAsync(productId, updateModel);
+        [HttpPut("delete/{productId}")]
+        public async Task<IActionResult> UpdateProductsAsync(int productId, Product updateModel) 
+        {
+            var result = await _productService.UpdateProductAsync(productId, updateModel);
 
-        //     if (result is OkObjectResult okResult)
-        //     {
-        //         return Ok(okResult.Value);
-        //     }
-        //     else if (result is NotFoundObjectResult notFoundResult)
-        //     {
-        //         return NotFound(notFoundResult.Value);
-        //     }
-        //     else
-        //     {
-        //         return StatusCode(500, "Internal Server Error");
-        //     }
-        // }
+            if (result is OkObjectResult okResult)
+            {
+                return Ok(okResult.Value);
+            }
+            else if (result is NotFoundObjectResult notFoundResult)
+            {
+                return NotFound(notFoundResult.Value);
+            }
+            else
+            {
+                return StatusCode(500, "Internal Server Error");
+            }
+        }
     }
 }

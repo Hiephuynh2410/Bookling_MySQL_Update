@@ -1,0 +1,85 @@
+@model IEnumerable<Booking.Models.Product>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="table-infoStaff">
+    <table class="table-List">
+        <tr class="title-infoList">
+
+            <th>Id</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Quanlity</th>
+            <th>Image</th>
+            <th>product Type</th>
+            <th>Sold</th>
+            <th>Provider</th>
+            <th>Create At</th>
+            <th>Update At</th>
+            <th>Create By</th>
+            <th>Update By</th>
+            <th>Action</th>
+        </tr>
+        <tbody class="box-tbody">
+            @if (Model != null)
+            {
+                
+                @foreach (var item in Model)
+                {
+                    <tr class="item-infoList">
+                        <td>@item.ProductId</td>
+                        <td style="    text-align: center;width: 20%;">
+                            @item.Name
+                        </td>
+                        <td style="width: 20%; text-align: justify;">
+                            @item.Description
+                        </td>
+                        <td>
+                            @item.Price
+                        </td>
+                        <td>    
+                            @item.Quantity
+                        </td>
+                        <td>
+
+                            <img width="20px" style="object-fit: scale-down" src="@item.Image" />
+                        </td>
+                        <td>
+                            @item.ProductType?.Name
+                        </td>
+                        <td>
+                            @item.Sold
+                        </td>
+                        <td>
+                            @item.Provider?.Name
+                        </td>
+                        <td>@item.CreatedAt?.ToString("dd/MM/yyyy HH:mm tt")</td>
+                        <td>@item.UpdatedAt?.ToString("dd/MM/yyyy HH:mm tt")</td>
+                        <td>@item.CreatedBy</td>
+                        <td>@item.UpdatedBy</td>
+                        <td>
+                            <button class="btn-edit" onclick="navigateTo('Edit', @item.ProductId)">
+                                Edit
+                            </button>
+                            <button class="btn-detail" onclick="navigateTo('Detail', @item.ProductId)">
+                                Detail
+                            </button>
+                            <button class="btn-delete" onclick="deleteStaff(@item.ProductId)">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr style="text-align:center">
+                    <td colspan="14" style="color:Red">No products found.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<script src="~/assets/js/CRUD.js"/>
