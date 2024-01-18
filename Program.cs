@@ -14,6 +14,7 @@ builder.Services.AddDbContext<DlctContext>(options => {
 });
 
 builder.Services.AddScoped<ProductService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -32,7 +33,11 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    name: "adminArea",
+    pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
 
+ app.MapGet("/", async context =>
+    {
+        context.Response.Redirect("/Admin/Home/Index");
+    });
 app.Run();

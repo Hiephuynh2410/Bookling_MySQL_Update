@@ -26,4 +26,9 @@
     <PackageReference Include="Quick.AspNetCore.Components.Web.Extensions" Version="6.0.2" />
     <PackageReference Include="RestSharp" Version="110.2.0" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers/" />
+    <Folder Include="wwwroot/assets/" />
+  </ItemGroup>
 </Project>

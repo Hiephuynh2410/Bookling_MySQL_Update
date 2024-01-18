@@ -5,6 +5,1166 @@
       "PackagePath": "staticwebassets/Booking.bundle.scp.css"
     },
     {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/css/material-dashboard.css",
+      "PackagePath": "staticwebassets/assets/css/material-dashboard.css"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/css/material-dashboard.css.map",
+      "PackagePath": "staticwebassets/assets/css/material-dashboard.css.map"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/css/material-dashboard.min.css",
+      "PackagePath": "staticwebassets/assets/css/material-dashboard.min.css"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/css/nucleo-icons.css",
+      "PackagePath": "staticwebassets/assets/css/nucleo-icons.css"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/css/nucleo-svg.css",
+      "PackagePath": "staticwebassets/assets/css/nucleo-svg.css"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/fonts/nucleo-icons.eot",
+      "PackagePath": "staticwebassets/assets/fonts/nucleo-icons.eot"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/fonts/nucleo-icons.svg",
+      "PackagePath": "staticwebassets/assets/fonts/nucleo-icons.svg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/fonts/nucleo-icons.ttf",
+      "PackagePath": "staticwebassets/assets/fonts/nucleo-icons.ttf"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/fonts/nucleo-icons.woff",
+      "PackagePath": "staticwebassets/assets/fonts/nucleo-icons.woff"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/fonts/nucleo-icons.woff2",
+      "PackagePath": "staticwebassets/assets/fonts/nucleo-icons.woff2"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/fonts/nucleo.eot",
+      "PackagePath": "staticwebassets/assets/fonts/nucleo.eot"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/fonts/nucleo.ttf",
+      "PackagePath": "staticwebassets/assets/fonts/nucleo.ttf"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/fonts/nucleo.woff",
+      "PackagePath": "staticwebassets/assets/fonts/nucleo.woff"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/fonts/nucleo.woff2",
+      "PackagePath": "staticwebassets/assets/fonts/nucleo.woff2"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/.DS_Store",
+      "PackagePath": "staticwebassets/assets/img/.DS_Store"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/apple-icon.png",
+      "PackagePath": "staticwebassets/assets/img/apple-icon.png"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/bg-pricing.jpg",
+      "PackagePath": "staticwebassets/assets/img/bg-pricing.jpg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/bg-smart-home-1.jpg",
+      "PackagePath": "staticwebassets/assets/img/bg-smart-home-1.jpg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/bg-smart-home-2.jpg",
+      "PackagePath": "staticwebassets/assets/img/bg-smart-home-2.jpg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/bruce-mars.jpg",
+      "PackagePath": "staticwebassets/assets/img/bruce-mars.jpg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/down-arrow-dark.svg",
+      "PackagePath": "staticwebassets/assets/img/down-arrow-dark.svg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/down-arrow-white.svg",
+      "PackagePath": "staticwebassets/assets/img/down-arrow-white.svg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/down-arrow.svg",
+      "PackagePath": "staticwebassets/assets/img/down-arrow.svg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/drake.jpg",
+      "PackagePath": "staticwebassets/assets/img/drake.jpg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/favicon.png",
+      "PackagePath": "staticwebassets/assets/img/favicon.png"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/home-decor-1.jpg",
+      "PackagePath": "staticwebassets/assets/img/home-decor-1.jpg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/home-decor-2.jpg",
+      "PackagePath": "staticwebassets/assets/img/home-decor-2.jpg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/home-decor-3.jpg",
+      "PackagePath": "staticwebassets/assets/img/home-decor-3.jpg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/icons/flags/AU.png",
+      "PackagePath": "staticwebassets/assets/img/icons/flags/AU.png"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/icons/flags/BR.png",
+      "PackagePath": "staticwebassets/assets/img/icons/flags/BR.png"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/icons/flags/DE.png",
+      "PackagePath": "staticwebassets/assets/img/icons/flags/DE.png"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/icons/flags/GB.png",
+      "PackagePath": "staticwebassets/assets/img/icons/flags/GB.png"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/icons/flags/US.png",
+      "PackagePath": "staticwebassets/assets/img/icons/flags/US.png"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/illustrations/chat.png",
+      "PackagePath": "staticwebassets/assets/img/illustrations/chat.png"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/illustrations/danger-chat-ill.png",
+      "PackagePath": "staticwebassets/assets/img/illustrations/danger-chat-ill.png"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/illustrations/dark-lock-ill.png",
+      "PackagePath": "staticwebassets/assets/img/illustrations/dark-lock-ill.png"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/illustrations/error-404.png",
+      "PackagePath": "staticwebassets/assets/img/illustrations/error-404.png"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/illustrations/error-500.png",
+      "PackagePath": "staticwebassets/assets/img/illustrations/error-500.png"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/illustrations/illustration-lock.jpg",
+      "PackagePath": "staticwebassets/assets/img/illustrations/illustration-lock.jpg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/illustrations/illustration-reset.jpg",
+      "PackagePath": "staticwebassets/assets/img/illustrations/illustration-reset.jpg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/illustrations/illustration-signin.jpg",
+      "PackagePath": "staticwebassets/assets/img/illustrations/illustration-signin.jpg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/illustrations/illustration-signup.jpg",
+      "PackagePath": "staticwebassets/assets/img/illustrations/illustration-signup.jpg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/illustrations/illustration-verification.jpg",
+      "PackagePath": "staticwebassets/assets/img/illustrations/illustration-verification.jpg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/illustrations/lock.png",
+      "PackagePath": "staticwebassets/assets/img/illustrations/lock.png"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/illustrations/pattern-tree.svg",
+      "PackagePath": "staticwebassets/assets/img/illustrations/pattern-tree.svg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/illustrations/rocket-white.png",
+      "PackagePath": "staticwebassets/assets/img/illustrations/rocket-white.png"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/ivana-square.jpg",
+      "PackagePath": "staticwebassets/assets/img/ivana-square.jpg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/ivana-squares.jpg",
+      "PackagePath": "staticwebassets/assets/img/ivana-squares.jpg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/ivancik.jpg",
+      "PackagePath": "staticwebassets/assets/img/ivancik.jpg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/kal-visuals-square.jpg",
+      "PackagePath": "staticwebassets/assets/img/kal-visuals-square.jpg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/logo-ct-dark.png",
+      "PackagePath": "staticwebassets/assets/img/logo-ct-dark.png"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/logo-ct.png",
+      "PackagePath": "staticwebassets/assets/img/logo-ct.png"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/logos/gray-logos/logo-coinbase.svg",
+      "PackagePath": "staticwebassets/assets/img/logos/gray-logos/logo-coinbase.svg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/logos/gray-logos/logo-nasa.svg",
+      "PackagePath": "staticwebassets/assets/img/logos/gray-logos/logo-nasa.svg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/logos/gray-logos/logo-netflix.svg",
+      "PackagePath": "staticwebassets/assets/img/logos/gray-logos/logo-netflix.svg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/logos/gray-logos/logo-pinterest.svg",
+      "PackagePath": "staticwebassets/assets/img/logos/gray-logos/logo-pinterest.svg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/logos/gray-logos/logo-spotify.svg",
+      "PackagePath": "staticwebassets/assets/img/logos/gray-logos/logo-spotify.svg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/logos/gray-logos/logo-vodafone.svg",
+      "PackagePath": "staticwebassets/assets/img/logos/gray-logos/logo-vodafone.svg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/logos/mastercard.png",
+      "PackagePath": "staticwebassets/assets/img/logos/mastercard.png"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/logos/visa.png",
+      "PackagePath": "staticwebassets/assets/img/logos/visa.png"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/marie.jpg",
+      "PackagePath": "staticwebassets/assets/img/marie.jpg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/meeting.jpg",
+      "PackagePath": "staticwebassets/assets/img/meeting.jpg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/office-dark.jpg",
+      "PackagePath": "staticwebassets/assets/img/office-dark.jpg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/product-12.jpg",
+      "PackagePath": "staticwebassets/assets/img/product-12.jpg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/products/product-1-min.jpg",
+      "PackagePath": "staticwebassets/assets/img/products/product-1-min.jpg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/products/product-11.jpg",
+      "PackagePath": "staticwebassets/assets/img/products/product-11.jpg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/products/product-2-min.jpg",
+      "PackagePath": "staticwebassets/assets/img/products/product-2-min.jpg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/products/product-3-min.jpg",
+      "PackagePath": "staticwebassets/assets/img/products/product-3-min.jpg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/products/product-4-min.jpg",
+      "PackagePath": "staticwebassets/assets/img/products/product-4-min.jpg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/products/product-5-min.jpg",
+      "PackagePath": "staticwebassets/assets/img/products/product-5-min.jpg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/products/product-6-min.jpg",
+      "PackagePath": "staticwebassets/assets/img/products/product-6-min.jpg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/products/product-7-min.jpg",
+      "PackagePath": "staticwebassets/assets/img/products/product-7-min.jpg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/products/product-details-1.jpg",
+      "PackagePath": "staticwebassets/assets/img/products/product-details-1.jpg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/products/product-details-2.jpg",
+      "PackagePath": "staticwebassets/assets/img/products/product-details-2.jpg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/products/product-details-3.jpg",
+      "PackagePath": "staticwebassets/assets/img/products/product-details-3.jpg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/products/product-details-4.jpg",
+      "PackagePath": "staticwebassets/assets/img/products/product-details-4.jpg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/products/product-details-5.jpg",
+      "PackagePath": "staticwebassets/assets/img/products/product-details-5.jpg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/shapes/pattern-lines.svg",
+      "PackagePath": "staticwebassets/assets/img/shapes/pattern-lines.svg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/shapes/waves-white.svg",
+      "PackagePath": "staticwebassets/assets/img/shapes/waves-white.svg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/small-logos/bootstrap.svg",
+      "PackagePath": "staticwebassets/assets/img/small-logos/bootstrap.svg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/small-logos/creative-tim.svg",
+      "PackagePath": "staticwebassets/assets/img/small-logos/creative-tim.svg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/small-logos/devto.svg",
+      "PackagePath": "staticwebassets/assets/img/small-logos/devto.svg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/small-logos/github.svg",
+      "PackagePath": "staticwebassets/assets/img/small-logos/github.svg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/small-logos/google-webdev.svg",
+      "PackagePath": "staticwebassets/assets/img/small-logos/google-webdev.svg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/small-logos/icon-bulb.svg",
+      "PackagePath": "staticwebassets/assets/img/small-logos/icon-bulb.svg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/small-logos/icon-sun-cloud.png",
+      "PackagePath": "staticwebassets/assets/img/small-logos/icon-sun-cloud.png"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/small-logos/logo-asana.svg",
+      "PackagePath": "staticwebassets/assets/img/small-logos/logo-asana.svg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/small-logos/logo-atlassian.svg",
+      "PackagePath": "staticwebassets/assets/img/small-logos/logo-atlassian.svg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/small-logos/logo-invision.svg",
+      "PackagePath": "staticwebassets/assets/img/small-logos/logo-invision.svg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/small-logos/logo-jira.svg",
+      "PackagePath": "staticwebassets/assets/img/small-logos/logo-jira.svg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/small-logos/logo-slack.svg",
+      "PackagePath": "staticwebassets/assets/img/small-logos/logo-slack.svg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/small-logos/logo-spotify.svg",
+      "PackagePath": "staticwebassets/assets/img/small-logos/logo-spotify.svg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/small-logos/logo-xd.svg",
+      "PackagePath": "staticwebassets/assets/img/small-logos/logo-xd.svg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/team-1.jpg",
+      "PackagePath": "staticwebassets/assets/img/team-1.jpg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/team-2.jpg",
+      "PackagePath": "staticwebassets/assets/img/team-2.jpg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/team-3.jpg",
+      "PackagePath": "staticwebassets/assets/img/team-3.jpg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/team-4.jpg",
+      "PackagePath": "staticwebassets/assets/img/team-4.jpg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/team-5.jpg",
+      "PackagePath": "staticwebassets/assets/img/team-5.jpg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/tesla-model-s.png",
+      "PackagePath": "staticwebassets/assets/img/tesla-model-s.png"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/img/vr-bg.jpg",
+      "PackagePath": "staticwebassets/assets/img/vr-bg.jpg"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/js/.DS_Store",
+      "PackagePath": "staticwebassets/assets/js/.DS_Store"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/js/chart.js",
+      "PackagePath": "staticwebassets/assets/js/chart.js"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/js/core/bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets/assets/js/core/bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/js/core/bootstrap.min.js",
+      "PackagePath": "staticwebassets/assets/js/core/bootstrap.min.js"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/js/core/popper.min.js",
+      "PackagePath": "staticwebassets/assets/js/core/popper.min.js"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/js/material-dashboard.js",
+      "PackagePath": "staticwebassets/assets/js/material-dashboard.js"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/js/material-dashboard.js.map",
+      "PackagePath": "staticwebassets/assets/js/material-dashboard.js.map"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/js/material-dashboard.min.js",
+      "PackagePath": "staticwebassets/assets/js/material-dashboard.min.js"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/js/plugins/Chart.extension.js",
+      "PackagePath": "staticwebassets/assets/js/plugins/Chart.extension.js"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/js/plugins/bootstrap-notify.js",
+      "PackagePath": "staticwebassets/assets/js/plugins/bootstrap-notify.js"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/js/plugins/chartjs.min.js",
+      "PackagePath": "staticwebassets/assets/js/plugins/chartjs.min.js"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/js/plugins/countup.min.js",
+      "PackagePath": "staticwebassets/assets/js/plugins/countup.min.js"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/js/plugins/perfect-scrollbar.min.js",
+      "PackagePath": "staticwebassets/assets/js/plugins/perfect-scrollbar.min.js"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/js/plugins/smooth-scrollbar.min.js",
+      "PackagePath": "staticwebassets/assets/js/plugins/smooth-scrollbar.min.js"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/js/plugins/world.js",
+      "PackagePath": "staticwebassets/assets/js/plugins/world.js"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/js/scrollbar.js",
+      "PackagePath": "staticwebassets/assets/js/scrollbar.js"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/_alert.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/_alert.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/_avatars.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/_avatars.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/_badge.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/_badge.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/_breadcrumbs.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/_breadcrumbs.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/_buttons.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/_buttons.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/_cards.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/_cards.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/_dark-version.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/_dark-version.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/_dropdown.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/_dropdown.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/_dropup.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/_dropup.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/_fixed-plugin.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/_fixed-plugin.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/_footer.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/_footer.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/_forms.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/_forms.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/_gradients.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/_gradients.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/_header.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/_header.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/_icons.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/_icons.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/_info-areas.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/_info-areas.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/_misc.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/_misc.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/_nav.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/_nav.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/_navbar-vertical.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/_navbar-vertical.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/_navbar.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/_navbar.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/_pagination.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/_pagination.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/_popovers.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/_popovers.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/_progress.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/_progress.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/_ripple.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/_ripple.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/_rtl.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/_rtl.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/_social-buttons.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/_social-buttons.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/_tables.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/_tables.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/_tilt.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/_tilt.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/_timeline.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/_timeline.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/_tooltips.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/_tooltips.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/_typography.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/_typography.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/_utilities-extend.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/_utilities-extend.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/_utilities.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/_utilities.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/_variables.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/_variables.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/_accordion.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/_accordion.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/_alert.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/_alert.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/_badge.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/_badge.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/_breadcrumb.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/_breadcrumb.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/_button-group.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/_button-group.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/_buttons.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/_buttons.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/_card.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/_card.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/_carousel.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/_carousel.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/_close.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/_close.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/_containers.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/_containers.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/_dropdown.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/_dropdown.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/_forms.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/_forms.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/_functions.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/_functions.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/_grid.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/_grid.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/_helpers.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/_helpers.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/_images.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/_images.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/_list-group.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/_list-group.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/_maps.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/_maps.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/_mixins.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/_mixins.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/_modal.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/_modal.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/_nav.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/_nav.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/_navbar.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/_navbar.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/_offcanvas.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/_offcanvas.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/_pagination.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/_pagination.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/_placeholders.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/_placeholders.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/_popover.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/_popover.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/_progress.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/_progress.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/_reboot.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/_reboot.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/_root.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/_root.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/_spinners.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/_spinners.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/_tables.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/_tables.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/_toasts.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/_toasts.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/_tooltip.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/_tooltip.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/_transitions.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/_transitions.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/_type.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/_type.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/_utilities.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/_utilities.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/_variables.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/_variables.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/bootstrap-grid.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/bootstrap-grid.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/bootstrap-reboot.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/bootstrap-reboot.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/bootstrap-utilities.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/bootstrap-utilities.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/bootstrap.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/bootstrap.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/forms/_floating-labels.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/forms/_floating-labels.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/forms/_form-check.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/forms/_form-check.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/forms/_form-control.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/forms/_form-control.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/forms/_form-range.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/forms/_form-range.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/forms/_form-select.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/forms/_form-select.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/forms/_form-text.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/forms/_form-text.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/forms/_input-group.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/forms/_input-group.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/forms/_labels.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/forms/_labels.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/forms/_validation.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/forms/_validation.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/helpers/_clearfix.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/helpers/_clearfix.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/helpers/_color-bg.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/helpers/_color-bg.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/helpers/_colored-links.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/helpers/_colored-links.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/helpers/_position.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/helpers/_position.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/helpers/_ratio.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/helpers/_ratio.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/helpers/_stacks.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/helpers/_stacks.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/helpers/_stretched-link.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/helpers/_stretched-link.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/helpers/_text-truncation.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/helpers/_text-truncation.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/helpers/_visually-hidden.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/helpers/_visually-hidden.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/helpers/_vr.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/helpers/_vr.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/mixins/_alert.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/mixins/_alert.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/mixins/_backdrop.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/mixins/_backdrop.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/mixins/_banner.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/mixins/_banner.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/mixins/_border-radius.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/mixins/_border-radius.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/mixins/_box-shadow.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/mixins/_box-shadow.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/mixins/_breakpoints.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/mixins/_breakpoints.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/mixins/_buttons.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/mixins/_buttons.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/mixins/_caret.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/mixins/_caret.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/mixins/_clearfix.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/mixins/_clearfix.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/mixins/_color-scheme.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/mixins/_color-scheme.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/mixins/_container.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/mixins/_container.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/mixins/_deprecate.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/mixins/_deprecate.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/mixins/_forms.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/mixins/_forms.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/mixins/_gradients.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/mixins/_gradients.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/mixins/_grid.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/mixins/_grid.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/mixins/_image.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/mixins/_image.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/mixins/_list-group.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/mixins/_list-group.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/mixins/_lists.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/mixins/_lists.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/mixins/_pagination.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/mixins/_pagination.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/mixins/_reset-text.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/mixins/_reset-text.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/mixins/_resize.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/mixins/_resize.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/mixins/_table-variants.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/mixins/_table-variants.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/mixins/_text-truncate.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/mixins/_text-truncate.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/mixins/_transition.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/mixins/_transition.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/mixins/_utilities.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/mixins/_utilities.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/mixins/_visually-hidden.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/mixins/_visually-hidden.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/utilities/_api.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/utilities/_api.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/bootstrap/vendor/_rfs.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/bootstrap/vendor/_rfs.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/cards/card-background.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/cards/card-background.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/cards/card-rotate.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/cards/card-rotate.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/custom/_styles.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/custom/_styles.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/custom/_variables.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/custom/_variables.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/forms/_form-check.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/forms/_form-check.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/forms/_form-select.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/forms/_form-select.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/forms/_form-switch.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/forms/_form-switch.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/forms/_forms.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/forms/_forms.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/forms/_input-group.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/forms/_input-group.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/forms/_inputs.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/forms/_inputs.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/forms/_labels.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/forms/_labels.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/mixins/_badge.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/mixins/_badge.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/mixins/_buttons.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/mixins/_buttons.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/mixins/_colored-shadows.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/mixins/_colored-shadows.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/mixins/_hover.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/mixins/_hover.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/mixins/_social-buttons.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/mixins/_social-buttons.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/mixins/_vendor.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/mixins/_vendor.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/mixins/mixins.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/mixins/mixins.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/plugins/free/_flatpickr.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/plugins/free/_flatpickr.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/plugins/free/_nouislider.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/plugins/free/_nouislider.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/plugins/free/_perfect-scrollbar.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/plugins/free/_perfect-scrollbar.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/plugins/free/_prism.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/plugins/free/_prism.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/plugins/free/plugins.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/plugins/free/plugins.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/theme.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/theme.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/variables/_animations.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/variables/_animations.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/variables/_avatars.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/variables/_avatars.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/variables/_badge.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/variables/_badge.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/variables/_breadcrumb.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/variables/_breadcrumb.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/variables/_cards-extend.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/variables/_cards-extend.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/variables/_cards.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/variables/_cards.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/variables/_choices.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/variables/_choices.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/variables/_dark-version.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/variables/_dark-version.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/variables/_dropdowns.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/variables/_dropdowns.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/variables/_fixed-plugin.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/variables/_fixed-plugin.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/variables/_form-switch.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/variables/_form-switch.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/variables/_full-calendar.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/variables/_full-calendar.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/variables/_header.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/variables/_header.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/variables/_info-areas.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/variables/_info-areas.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/variables/_misc-extend.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/variables/_misc-extend.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/variables/_misc.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/variables/_misc.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/variables/_navbar-vertical.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/variables/_navbar-vertical.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/variables/_navbar.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/variables/_navbar.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/variables/_pagination.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/variables/_pagination.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/variables/_ripple.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/variables/_ripple.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/variables/_rtl.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/variables/_rtl.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/variables/_social-buttons.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/variables/_social-buttons.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/variables/_table.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/variables/_table.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/variables/_timeline.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/variables/_timeline.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/variables/_utilities-extend.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/variables/_utilities-extend.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/variables/_utilities.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/variables/_utilities.scss"
+    },
+    {
+      "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/assets/scss/material-dashboard/variables/_virtual-reality.scss",
+      "PackagePath": "staticwebassets/assets/scss/material-dashboard/variables/_virtual-reality.scss"
+    },
+    {
       "Id": "/Users/hiephuynh/Desktop/Booking/Booking/wwwroot/css/site.css",
       "PackagePath": "staticwebassets/css/site.css"
     },
