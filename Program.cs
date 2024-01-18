@@ -1,8 +1,19 @@
+using Booking.Models;
+using Booking.Services;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
 var connectionString = builder.Configuration.GetConnectionString("BookingCatToc");
+
+builder.Services.AddDbContext<DlctContext>(options => {
+    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
+});
+
+builder.Services.AddScoped<ProductService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

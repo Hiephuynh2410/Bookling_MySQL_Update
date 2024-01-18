@@ -349,6 +349,7 @@
 /Users/hiephuynh/Desktop/Booking/Booking/bin/Debug/net7.0/Microsoft.Win32.SystemEvents.dll
 /Users/hiephuynh/Desktop/Booking/Booking/bin/Debug/net7.0/MimeKit.dll
 /Users/hiephuynh/Desktop/Booking/Booking/bin/Debug/net7.0/Mono.TextTemplating.dll
+/Users/hiephuynh/Desktop/Booking/Booking/bin/Debug/net7.0/MySqlConnector.dll
 /Users/hiephuynh/Desktop/Booking/Booking/bin/Debug/net7.0/Newtonsoft.Json.dll
 /Users/hiephuynh/Desktop/Booking/Booking/bin/Debug/net7.0/Newtonsoft.Json.Bson.dll
 /Users/hiephuynh/Desktop/Booking/Booking/bin/Debug/net7.0/NuGet.Common.dll
@@ -362,6 +363,7 @@
 /Users/hiephuynh/Desktop/Booking/Booking/bin/Debug/net7.0/NuGet.Versioning.dll
 /Users/hiephuynh/Desktop/Booking/Booking/bin/Debug/net7.0/PagedList.Core.dll
 /Users/hiephuynh/Desktop/Booking/Booking/bin/Debug/net7.0/PagedList.Core.Mvc.dll
+/Users/hiephuynh/Desktop/Booking/Booking/bin/Debug/net7.0/Pomelo.EntityFrameworkCore.MySql.dll
 /Users/hiephuynh/Desktop/Booking/Booking/bin/Debug/net7.0/Microsoft.AspNetCore.Components.Web.Extensions.dll
 /Users/hiephuynh/Desktop/Booking/Booking/bin/Debug/net7.0/RestSharp.dll
 /Users/hiephuynh/Desktop/Booking/Booking/bin/Debug/net7.0/System.CodeDom.dll
@@ -552,5 +554,3 @@
 /Users/hiephuynh/Desktop/Booking/Booking/obj/Debug/net7.0/Booking.pdb
 /Users/hiephuynh/Desktop/Booking/Booking/obj/Debug/net7.0/Booking.genruntimeconfig.cache
 /Users/hiephuynh/Desktop/Booking/Booking/obj/Debug/net7.0/ref/Booking.dll
-/Users/hiephuynh/Desktop/Booking/Booking/bin/Debug/net7.0/MySqlConnector.dll
-/Users/hiephuynh/Desktop/Booking/Booking/bin/Debug/net7.0/Pomelo.EntityFrameworkCore.MySql.dll
