@@ -2,84 +2,95 @@
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+
 }
-<div class="table-infoStaff">
-    <table class="table-List">
-        <tr class="title-infoList">
+<div class="container-fluid py-4">
+    <a  onclick="window.location.href='/Admin/Product/Create'" class="btn bg-gradient-primary w-100">Create</a>
+    <div class="row">
+    <div class="col-12">
+         <partial name="_SettingIcon"/>
+        <div class="card my-4">
+        <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+            <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+            <h6 class="text-white text-capitalize ps-3">Products table</h6>
+            </div>
+        </div>
+        <div class="card-body px-0 pb-2">
+            <div class="table-responsive p-0">
+            <table class="table align-items-center mb-0">
+                <thead>
+                <tr>
+                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Info</th>
+                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Description</th>
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Price</th>
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Sold</th>
+                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Created At</th>
+                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Updated At</th>
+                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Created By</th>
+                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Updated By</th>
 
-            <th>Id</th>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Price</th>
-            <th>Quanlity</th>
-            <th>Image</th>
-            <th>product Type</th>
-            <th>Sold</th>
-            <th>Provider</th>
-            <th>Create At</th>
-            <th>Update At</th>
-            <th>Create By</th>
-            <th>Update By</th>
-            <th>Action</th>
-        </tr>
-        <tbody class="box-tbody">
-            @if (Model != null)
-            {
-                
-                @foreach (var item in Model)
-                {
-                    <tr class="item-infoList">
-                        <td>@item.ProductId</td>
-                        <td style="    text-align: center;width: 20%;">
-                            @item.Name
-                        </td>
-                        <td style="width: 20%; text-align: justify;">
-                            @item.Description
-                        </td>
-                        <td>
-                            @item.Price
-                        </td>
-                        <td>    
-                            @item.Quantity
-                        </td>
-                        <td>
-
-                            <img width="20px" style="object-fit: scale-down" src="@item.Image" />
-                        </td>
-                        <td>
-                            @item.ProductType?.Name
-                        </td>
-                        <td>
-                            @item.Sold
-                        </td>
-                        <td>
-                            @item.Provider?.Name
-                        </td>
-                        <td>@item.CreatedAt?.ToString("dd/MM/yyyy HH:mm tt")</td>
-                        <td>@item.UpdatedAt?.ToString("dd/MM/yyyy HH:mm tt")</td>
-                        <td>@item.CreatedBy</td>
-                        <td>@item.UpdatedBy</td>
-                        <td>
-                            <button class="btn-edit" onclick="navigateTo('Edit', @item.ProductId)">
-                                Edit
-                            </button>
-                            <button class="btn-detail" onclick="navigateTo('Detail', @item.ProductId)">
-                                Detail
-                            </button>
-                            <button class="btn-delete" onclick="deleteStaff(@item.ProductId)">
-                                Delete
-                            </button>
-                        </td>
-                    </tr>
-                }
-            }
-            else
-            {
-                <tr style="text-align:center">
-                    <td colspan="14" style="color:Red">No products found.</td>
+                    <th class="text-secondary opacity-7"></th>
                 </tr>
-            }
-        </tbody>
-    </table>
+                </thead>
+                <tbody>
+                @if (Model != null)
+                {
+                    @foreach (var item in Model)
+                    {
+                        <tr id="productRow_@item.ProductId" class="swipe-to-delete">
+                            
+                            <td>
+                                <div class="d-flex px-2 py-1">
+                                <div>
+                                    <img src="@item.Image" class="avatar avatar-sm me-3 border-radius-lg" alt="user1">
+                                </div>
+                                <div class="d-flex flex-column justify-content-center">
+                                    <h6 class="mb-0 text-sm">@item.Name</h6>
+                                    <p class="text-xs text-secondary mb-0">ID: @item.ProductId</p>
+                                </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="text-xs font-weight-bold mb-0">@item.Description</p>
+                                <p class="text-xs text-secondary mb-0">Quantity: @item.Quantity</p>
+                                <p class="text-xs text-secondary mb-0">Type: @item.ProductType?.Name</p>
+                                <p class="text-xs text-secondary mb-0">Provider: @item.Provider?.Name</p>
+                            </td>
+                            <td class="align-middle text-center text-sm">
+                                <p class="text-xs font-weight-bold mb-0">@item.Price vnđ</p>
+                            </td>
+                            <td class="align-middle text-center">
+                                <span class="text-secondary text-xs font-weight-bold">@item.Sold</span>
+                            </td>
+                            <td>
+                                <span class="text-secondary text-xs font-weight-bold">@item.CreatedAt?.ToString("dd/MM/yyyy HH:mm tt")</span>
+                            </td>
+                            <td>
+                                <span class="text-secondary text-xs font-weight-bold">@item.UpdatedAt?.ToString("dd/MM/yyyy HH:mm tt")</span>
+                            </td>
+                            <td>
+                                <span class="text-secondary text-xs font-weight-bold">@item.CreatedBy</span>
+                            </td>
+                            <td>
+                                <span class="text-secondary text-xs font-weight-bold">@item.UpdatedBy</span>
+                            </td>
+                            <td class="align-middle">
+                                <a onclick="navigateTo('Edit', @item.ProductId)"  role="button" class="text-secondary btn font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
+                                    Edit
+                                </a>
+                                <a onclick="deleteStaff(@item.ProductId)"  role="button" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
+                                    <i class="btn-outline-primary btn fa-solid fa-x"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                }
+                </tbody>
+            </table>
+            </div>
+        </div>
+        </div>
+    </div>
 </div>
+
 <script src="~/assets/js/CRUD.js"/>
