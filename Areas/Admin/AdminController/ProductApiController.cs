@@ -60,7 +60,7 @@ namespace Booking.Areas.Admin.AdminController
             }
         }
 
-        [HttpPut("delete/{productId}")]
+        [HttpPut("update/{productId}")]
         public async Task<IActionResult> UpdateProductsAsync(int productId, Product updateModel) 
         {
             var result = await _productService.UpdateProductAsync(productId, updateModel);

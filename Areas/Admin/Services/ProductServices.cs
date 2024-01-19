@@ -125,7 +125,7 @@ namespace Booking.Services
 
                 var deleteSuccessResponse = new
                 {
-                    Message = "Product deleted successfully"
+                    Message = "Product deleted successfully",
                 };
 
                 return new OkObjectResult(deleteSuccessResponse);
@@ -167,8 +167,6 @@ namespace Booking.Services
             {
                 productToUpdate.Quantity = updateModel.Quantity;
             }
-
-          
 
             if (updateModel.ProductTypeId.HasValue)
             {
