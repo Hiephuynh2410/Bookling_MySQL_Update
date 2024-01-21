@@ -17,11 +17,8 @@ builder.Services.AddDbContext<DlctContext>(options => {
     options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
 
 });
-
-
-builder.Services.AddScoped<ProductService>();
-builder.Services.AddScoped<ProductTypeSevices>();
-
+//register Services
+builder.Services.AddServices();
 
 var app = builder.Build();
 

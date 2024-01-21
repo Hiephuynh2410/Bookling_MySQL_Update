@@ -2,31 +2,55 @@ $(document).ready(function () {
     $('form').submit(function (e) {
         e.preventDefault();
 
+        var form = $(this);
+        var url = form.attr('action');
+        var redirectUrl = form.data('redirect-url');
+
         $.ajax({
-            url: '/Admin/Product/Create',
+            url: url,
             type: 'POST',
             dataType: 'json',
-            data: $('form').serialize(),
+            data: form.serialize(),
             success: function (data) {
-                if (data.success) {
-                    $('#message-container').removeClass('alert-danger').addClass('alert-success').text(data.message).show();
-                    $('form')[0].reset();
-                } else {
-                    $('#message-container').removeClass('alert-success').addClass('alert-danger').text(data.message).show();
-                }
-
-                setTimeout(function () {
-                    if (data.success) {
-                        window.location.href = '/Admin/Product/Index';
-                    }
-                }, 3000);
+                handleFormSubmissionResult(data, redirectUrl);
             },
             error: function () {
-                $('#message-container').removeClass('alert-success').addClass('alert-danger').text('Please Enter Fill Again').show();
-                $('form')[0].reset();
-                setTimeout(function () {
-                }, 3000);
+                handleFormSubmissionError();
             }
         });
     });
+
+    function handleFormSubmissionResult(data, redirectUrl) {
+        var messageContainer = $('#message-container');
+    
+        if (data.success) {
+            messageContainer.removeClass('alert-danger').addClass('alert-success').text(data.message).show();
+            $('form')[0].reset();
+    
+            setTimeout(function () {
+                if (redirectUrl) {
+                    window.location.href = redirectUrl;
+                } else {
+                    messageContainer.hide();
+                }
+            }, 1000);
+        } else {
+            messageContainer.removeClass('alert-success').addClass('alert-danger').text(data.message).show();
+    
+            setTimeout(function () {
+                messageContainer.hide();
+            }, 1000);
+        }
+    }
+    
+    function handleFormSubmissionError() {
+        var messageContainer = $('#message-container');
+        messageContainer.removeClass('alert-success').addClass('alert-danger').text('An error occurred. Please try again.').show();
+
+        $('form')[0].reset();
+        
+        setTimeout(function () {
+            messageContainer.hide();
+        }, 3000);
+    }
 });

@@ -54,5 +54,25 @@ namespace Booking.Areas.Admin.AdminController {
             
             }
         }
+
+        [HttpPut("update/{productTypeId}")]
+        public async Task<IActionResult> UpdateProductTypesAsync(int productTypeId, Producttype producttype) {
+           
+            var result = await _productTypeSevices.UpdateProductType(productTypeId, producttype);
+
+            if(result is OkObjectResult okResult) {
+
+                return Ok(okResult.Value);
+
+            } else if (result is NotFoundObjectResult notFoundResult) { 
+              
+                return NotFound(notFoundResult.Value);
+            
+            } else {
+            
+                return StatusCode(500, "Internal Server Error");
+            
+            }
+        }
     }
 }

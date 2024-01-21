@@ -53,7 +53,7 @@ namespace Booking.Services
             try {
                 var productType = await _dbContext.Producttypes.FindAsync(productTypeId);
                 if(productType == null) {
-                    return new NotFoundObjectResult("Product not found");
+                    return new NotFoundObjectResult("ProductType not found");
                 }
                 _dbContext.Producttypes.Remove(productType);
                 await _dbContext.SaveChangesAsync();
@@ -72,11 +72,29 @@ namespace Booking.Services
             }
         }
     
-        // public async Task<IActionResult> UpdateProductType(int productTypeId, Producttype producttype) { 
+        public async Task<IActionResult> UpdateProductType(int productTypeId, Producttype producttype) { 
 
-        //     var productTypeUpdate = await _dbContext.Producttypes
-        //         .FirstOrDefaultAsync(x => x.ProductTypeId == productTypeId);
+            var productTypeUpdate = await _dbContext.Producttypes
+                .FirstOrDefaultAsync(x => x.ProductTypeId == productTypeId);
 
-        // }
+            if (productTypeUpdate == null) {
+                return new NotFoundObjectResult("Not found Product");
+            }
+            
+            if (!string.IsNullOrWhiteSpace(producttype.Name))
+            {
+                productTypeUpdate.Name = producttype.Name;
+            }
+
+            _dbContext.Entry(productTypeUpdate).State = EntityState.Modified;
+            await _dbContext.SaveChangesAsync();
+            
+            var updateSuccessResponse = new {
+                Message = "Product type updated successfully",
+                Name = producttype.Name
+            };
+          
+            return new OkObjectResult(updateSuccessResponse);
+        }
     }
 }
