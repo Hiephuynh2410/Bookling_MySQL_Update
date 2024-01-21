@@ -9,7 +9,7 @@ public static class ServiceRegistrationExtensions
         services.AddScoped<ProductTypeSevices>();
         services.AddScoped<BranchServices>();
         services.AddScoped<ServiceServices>();
-
+        services.AddScoped<ServicesTypeServices>();
         return services;
     }
 }

@@ -1,0 +1,87 @@
+@model IEnumerable<Booking.Models.Service>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container-fluid py-4">
+    <a  onclick="window.location.href='/Admin/Product/Create'" class="btn bg-gradient-primary w-100">Create</a>
+    <div class="row">
+    <div class="col-12">
+         <partial name="_SettingIcon"/>
+        <div class="card my-4">
+        <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+            <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+            <h6 class="text-white text-capitalize ps-3">Services table</h6>
+            </div>
+        </div>
+        <div class="card-body px-0 pb-2">
+            <div class="table-responsive p-0">
+            <table class="table align-items-center mb-0">
+                <thead>
+                <tr>
+                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Info</th>
+                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Description</th>
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Quantity</th>
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Price</th>
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Sold</th>
+                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Created At</th>
+                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Updated At</th>
+                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Created By</th>
+                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Updated By</th>
+
+                    <th class="text-secondary opacity-7"></th>
+                </tr>
+                </thead>
+                <tbody>
+                @if (Model != null)
+                {
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            
+                            <td>
+                                <div class="d-flex px-2 py-1">
+                                    <div class="d-flex flex-column justify-content-center">
+                                        <h6 class="mb-0 text-sm">@item.Name</h6>
+                                        <p class="text-xs text-secondary mb-0">ID: @item.ServiceId</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="align-middle text-center">
+                                <p class="text-xs text-secondary mb-0">@item.ServiceTypeId</p>
+                            </td>
+                            <td class="align-middle text-center text-sm">
+                                <p class="text-xs font-weight-bold mb-0">@item.Price vnđ</p>
+                            </td>
+                            <td>
+                                <span class="text-secondary text-xs font-weight-bold">@item.CreatedAt?.ToString("dd/MM/yyyy HH:mm tt")</span>
+                            </td>
+                            <td>
+                                <span class="text-secondary text-xs font-weight-bold">@item.UpdatedAt?.ToString("dd/MM/yyyy HH:mm tt")</span>
+                            </td>
+                            <td>
+                                <span class="text-secondary text-xs font-weight-bold">@item.CreatedBy</span>
+                            </td>
+                            <td>
+                                <span class="text-secondary text-xs font-weight-bold">@item.UpdatedBy</span>
+                            </td>
+                            <td class="align-middle">
+                                <a onclick="navigateTo('Edit', @item.ServiceId)"  role="button" class="text-secondary btn font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
+                                    Edit
+                                </a>
+                                <a onclick="deleteStaff(@item.ServiceId)"  role="button" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
+                                    <i class="btn-outline-primary btn fa-solid fa-x"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                }
+                </tbody>
+            </table>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/assets/js/CRUD/CRUD_Services.js"/>
