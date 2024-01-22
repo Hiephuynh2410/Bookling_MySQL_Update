@@ -17,6 +17,8 @@ namespace Booking.Areas.Admin
             _httpClient = new HttpClient();
         }
 
+       
+
         //edit
         [HttpGet]
         public IActionResult Edit(int productId)

@@ -41,6 +41,82 @@ namespace Booking.Services
                
             }).Cast<object>().ToList();
         }
+        public async Task<IActionResult> CreateServiceAsync(Service service)
+        {
+            try
+            {
+                if (service.ServiceTypeId == null)
+                {
+                    return new BadRequestObjectResult("service type are required.");
+                }
 
+                DateTime currentDate = DateTime.Now;
+                
+                service.CreatedAt = currentDate;
+
+                _dbContext.Services.Add(service);
+                await _dbContext.SaveChangesAsync();
+
+                var createdService = await _dbContext.Services
+                    .Include(s => s.ServiceType)
+                    .FirstOrDefaultAsync(p => p.ServiceId == service.ServiceId);
+
+                if(createdService != null) {
+                    var result = new
+                    {
+                        createdService.ServiceId,
+                        createdService.Name,
+                        createdService.Price,
+                        createdService.Status,
+                        createdService.ServiceTypeId,
+                        createdService.CreatedAt,
+                        createdService.UpdatedAt,
+                        createdService.CreatedBy,
+                        createdService.UpdatedBy,
+                        Service = new
+                        {
+                            Name = createdService.ServiceType?.Name
+                        },
+                    };
+
+                    return new OkObjectResult(result);
+                } else {
+                    return new NotFoundResult();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.Error.WriteLine($"Error creating service: {ex.Message}");
+                 return new StatusCodeResult(500);
+            }
+        }
+    
+        public async Task<IActionResult> DeleteServiceAsync(int ServiceId)
+        {
+            try
+            {
+                var Service = await _dbContext.Services.FindAsync(ServiceId);
+
+                if (Service == null)
+                {
+                    return new NotFoundObjectResult("Service not found.");
+                }
+
+                _dbContext.Services.Remove(Service);
+                await _dbContext.SaveChangesAsync();
+
+                var deleteSuccessResponse = new
+                {
+                    Message = "Service deleted successfully",
+                };
+
+                return new OkObjectResult(deleteSuccessResponse);
+            }
+            catch (Exception ex)
+            {
+                Console.Error.WriteLine($"Error deleting Service: {ex.Message}");
+                return new StatusCodeResult(500);
+            }
+        }
     }
 }

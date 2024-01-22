@@ -19,6 +19,9 @@
             <table class="table align-items-center mb-0">
                 <thead>
                 <tr>
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                        <input type="checkbox" id="selectAll" />
+                    </th>
                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Info</th>
                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Description</th>
                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Quantity</th>
@@ -28,9 +31,11 @@
                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Updated At</th>
                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Created By</th>
                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Updated By</th>
-
                     <th class="text-secondary opacity-7"></th>
+                    <button id="deleteSelected" class="btn btn-danger">Delete Selected</button>
+
                 </tr>
+
                 </thead>
                 <tbody>
                 @if (Model != null)
@@ -38,7 +43,9 @@
                     @foreach (var item in Model)
                     {
                         <tr id="productRow_@item.ProductId" class="swipe-to-delete">
-                            
+                             <td class="align-middle text-center">
+                                  <input type="checkbox" class="productCheckbox" data-product-id="@item.ProductId" />
+                                    </td>
                             <td>
                                 <div class="d-flex px-2 py-1">
                                     <div>

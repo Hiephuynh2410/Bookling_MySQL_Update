@@ -78,5 +78,13 @@ namespace Booking.Areas.Admin.AdminController
                 return StatusCode(500, "Internal Server Error");
             }
         }
+[HttpDelete("delete-all/{productIds}")]
+public async Task<IActionResult> DeleteAllProductsAsync([FromBody] List<int> productIds)
+{
+    var result = await _productService.DeleteAllProductsAsync(productIds);
+    return result;
+}
+
+     
     }
 }

@@ -4,7 +4,7 @@
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 <div class="container-fluid py-4">
-    <a  onclick="window.location.href='/Admin/Product/Create'" class="btn bg-gradient-primary w-100">Create</a>
+    <a  onclick="window.location.href='/Admin/Services/Create'" class="btn bg-gradient-primary w-100">Create</a>
     <div class="row">
     <div class="col-12">
          <partial name="_SettingIcon"/>
@@ -20,10 +20,9 @@
                 <thead>
                 <tr>
                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Info</th>
-                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Description</th>
-                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Quantity</th>
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Service types</th>
+
                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Price</th>
-                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Sold</th>
                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Created At</th>
                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Updated At</th>
                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Created By</th>
@@ -48,7 +47,7 @@
                                 </div>
                             </td>
                             <td class="align-middle text-center">
-                                <p class="text-xs text-secondary mb-0">@item.ServiceTypeId</p>
+                                <p class="text-xs text-secondary mb-0">@item.ServiceType?.Name</p>
                             </td>
                             <td class="align-middle text-center text-sm">
                                 <p class="text-xs font-weight-bold mb-0">@item.Price vnđ</p>
