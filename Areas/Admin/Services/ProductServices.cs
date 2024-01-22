@@ -109,33 +109,6 @@ namespace Booking.Services
             }
         }
 
-        public async Task<IActionResult> DeleteProductAsync(int productId)
-        {
-            try
-            {
-                var product = await _dbContext.Products.FindAsync(productId);
-
-                if (product == null)
-                {
-                    return new NotFoundObjectResult("Product not found.");
-                }
-
-                _dbContext.Products.Remove(product);
-                await _dbContext.SaveChangesAsync();
-
-                var deleteSuccessResponse = new
-                {
-                    Message = "Product deleted successfully",
-                };
-
-                return new OkObjectResult(deleteSuccessResponse);
-            }
-            catch (Exception ex)
-            {
-                Console.Error.WriteLine($"Error deleting product: {ex.Message}");
-                return new StatusCodeResult(500);
-            }
-        }
 
         public async Task<IActionResult> UpdateProductAsync(int productId, Product updateModel)
         {
@@ -200,7 +173,54 @@ namespace Booking.Services
             return new OkObjectResult(updateSuccessResponse);
         }
        
-        
+        public async Task<IActionResult> DeleteProductAsync(int productId)
+        {
+            try
+            {
+                var product = await _dbContext.Products.FindAsync(productId);
+
+                if (product == null)
+                {
+                    return new NotFoundObjectResult("Product not found.");
+                }
+
+                _dbContext.Products.Remove(product);
+                await _dbContext.SaveChangesAsync();
+
+                var deleteSuccessResponse = new
+                {
+                    Message = "Product deleted successfully",
+                };
+
+                return new OkObjectResult(deleteSuccessResponse);
+            }
+            catch (Exception ex)
+            {
+                Console.Error.WriteLine($"Error deleting product: {ex.Message}");
+                return new StatusCodeResult(500);
+            }
+        }
+
+        public async Task<IActionResult> DeleteAllProductAsync(int productId)
+        {
+            var productToDelete = await _dbContext.Products.FindAsync(productId);
+
+            if (productToDelete == null)
+            {
+                return new NotFoundObjectResult("Not found Product");
+            }
+
+            _dbContext.Products.Remove(productToDelete);
+            await _dbContext.SaveChangesAsync();
+
+            var deleteSuccessResponse = new
+            {
+                Message = "Product deleted successfully"
+            };
+
+            return new OkObjectResult(deleteSuccessResponse);
+        }
+
 
     }
 }

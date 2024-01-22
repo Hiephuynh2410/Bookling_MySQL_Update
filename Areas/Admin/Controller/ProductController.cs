@@ -17,7 +17,62 @@ namespace Booking.Areas.Admin
             _httpClient = new HttpClient();
         }
 
+
+  //Delete
+        public async Task<IActionResult> Delete(int productId)
+        {
+          
+            var apiUrl = $"http://localhost:5196/api/ProductApi/delete/{productId}";
+
+            var response = await _httpClient.DeleteAsync(apiUrl);
+
+            if (response.IsSuccessStatusCode)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                var responseContent = await response.Content.ReadAsStringAsync();
+                Console.WriteLine("API Response Content: " + responseContent);
+
+                var errorResponse = JsonConvert.DeserializeObject<object>(responseContent);
+
+                string errorMessage = errorResponse?.ToString() ?? "An error occurred.";
+                return Json(new { success = false, messag = "Failed to create product" });
+
+            }
+        }
+
        
+       [HttpPost]
+        public async Task<IActionResult> DeleteProducts([FromBody] List<int> productIds)
+        {
+            var apiUrl = "http://localhost:5196/api/ProductApi/deleteAll";
+
+            using (var httpClient = new HttpClient())
+            {
+                var json = JsonConvert.SerializeObject(productIds);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+                var response = await httpClient.PostAsync(apiUrl, content);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    return Json(new { success = true, message = "Products deleted successfully" });
+                }
+                else
+                {
+                    var responseContent = await response.Content.ReadAsStringAsync();
+                    Console.WriteLine("API Response Content: " + responseContent);
+
+                    var errorResponse = JsonConvert.DeserializeObject<object>(responseContent);
+                    string errorMessage = errorResponse?.ToString() ?? "An error occurred.";
+
+                    return Json(new { success = false, message = errorMessage });
+                }
+            }
+        }
+
 
         //edit
         [HttpGet]
@@ -68,30 +123,7 @@ namespace Booking.Areas.Admin
             }
         }
 
-        //Delete
-        public async Task<IActionResult> Delete(int productId)
-        {
-          
-            var apiUrl = $"http://localhost:5196/api/ProductApi/delete/{productId}";
-
-            var response = await _httpClient.DeleteAsync(apiUrl);
-
-            if (response.IsSuccessStatusCode)
-            {
-                return RedirectToAction("Index");
-            }
-            else
-            {
-                var responseContent = await response.Content.ReadAsStringAsync();
-                Console.WriteLine("API Response Content: " + responseContent);
-
-                var errorResponse = JsonConvert.DeserializeObject<object>(responseContent);
-
-                string errorMessage = errorResponse?.ToString() ?? "An error occurred.";
-                return Json(new { success = false, messag = "Failed to create product" });
-
-            }
-        }
+        
 
         //create
         public IActionResult Create()

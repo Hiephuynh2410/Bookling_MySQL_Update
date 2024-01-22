@@ -18,3 +18,4 @@ function deleteStaff(ProductId) {
         navigateTo('Delete', ProductId);
     }
 }
+
