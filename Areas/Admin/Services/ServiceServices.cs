@@ -118,5 +118,26 @@ namespace Booking.Services
                 return new StatusCodeResult(500);
             }
         }
+
+        public async Task<IActionResult> DeleteAllServiceAsync(int ServiceId)
+        {
+            var serviToDelete = await _dbContext.Services.FindAsync(ServiceId);
+
+            if (serviToDelete == null)
+            {
+                return new NotFoundObjectResult("Not found service");
+            }
+
+            _dbContext.Services.Remove(serviToDelete);
+            await _dbContext.SaveChangesAsync();
+
+            var deleteSuccessResponse = new
+            {
+                Message = "service deleted successfully"
+            };
+
+            return new OkObjectResult(deleteSuccessResponse);
+        }
+
     }
 }

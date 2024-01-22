@@ -81,30 +81,28 @@ namespace Booking.Areas.Admin.AdminController
         }
 
        [HttpDelete("deleteAll")]
-public async Task<IActionResult> DeleteProductsAsync([FromBody] List<int> productIds)
-{
-    try
-    {
-        foreach (var productId in productIds)
+        public async Task<IActionResult> DeleteProductsAsync([FromBody] List<int> productIds)
         {
-            var result = await _productService.DeleteAllProductAsync(productId);
+            try
+            {
+                foreach (var productId in productIds)
+                {
+                    var result = await _productService.DeleteAllProductAsync(productId);
+                }
+
+                var deleteSuccessResponse = new
+                {
+                    Message = "Products deleted successfully"
+                };
+
+                return new OkObjectResult(deleteSuccessResponse);
+            }
+            catch (Exception ex)
+            {
+                // Log the exception details
+                Console.Error.WriteLine($"Error deleting products: {ex.Message}");
+                return new StatusCodeResult(500);
+            }
         }
-
-        var deleteSuccessResponse = new
-        {
-            Message = "Products deleted successfully"
-        };
-
-        return new OkObjectResult(deleteSuccessResponse);
-    }
-    catch (Exception ex)
-    {
-        // Log the exception details
-        Console.Error.WriteLine($"Error deleting products: {ex.Message}");
-        return new StatusCodeResult(500);
-    }
-}
-
-     
     }
 }
