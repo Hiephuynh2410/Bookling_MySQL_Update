@@ -18,6 +18,35 @@ namespace Booking.Areas.Admin
             _httpClient = new HttpClient();
         }
 
+        [HttpPost]
+        public async Task<IActionResult> DeleteProductTypes([FromBody] List<int> productTypeId)
+        {
+            var apiUrl = "http://localhost:5196/api/ProductTypeApi/deleteAll/";
+
+            using (var httpClient = new HttpClient())
+            {
+                var json = JsonConvert.SerializeObject(productTypeId);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+                var response = await httpClient.PostAsync(apiUrl, content);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    return Json(new { success = true, message = "ProductType deleted successfully" });
+                }
+                else
+                {
+                    var responseContent = await response.Content.ReadAsStringAsync();
+                    Console.WriteLine("API Response Content: " + responseContent);
+
+                    var errorResponse = JsonConvert.DeserializeObject<object>(responseContent);
+                    string errorMessage = errorResponse?.ToString() ?? "An error occurred.";
+
+                    return Json(new { success = false, message = errorMessage });
+                }
+            }
+        }
+
         //Delete
         public async Task<IActionResult> Delete(int productTypeId)
         {

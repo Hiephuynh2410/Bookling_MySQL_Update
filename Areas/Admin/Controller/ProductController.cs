@@ -18,7 +18,7 @@ namespace Booking.Areas.Admin
         }
 
 
-  //Delete
+        //Delete
         public async Task<IActionResult> Delete(int productId)
         {
           
@@ -44,7 +44,7 @@ namespace Booking.Areas.Admin
         }
 
        
-       [HttpPost]
+        [HttpPost]
         public async Task<IActionResult> DeleteProducts([FromBody] List<int> productIds)
         {
             var apiUrl = "http://localhost:5196/api/ProductApi/deleteAll";
@@ -72,7 +72,6 @@ namespace Booking.Areas.Admin
                 }
             }
         }
-
 
         //edit
         [HttpGet]
@@ -121,9 +120,7 @@ namespace Booking.Areas.Admin
 
                 return View(updateModel);
             }
-        }
-
-        
+        }     
 
         //create
         public IActionResult Create()

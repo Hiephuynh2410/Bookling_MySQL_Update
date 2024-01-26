@@ -80,7 +80,7 @@ namespace Booking.Areas.Admin.AdminController
             }
         }
 
-       [HttpDelete("deleteAll")]
+        [HttpDelete("deleteAll")]
         public async Task<IActionResult> DeleteProductsAsync([FromBody] List<int> productIds)
         {
             try

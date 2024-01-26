@@ -109,7 +109,6 @@ namespace Booking.Services
             }
         }
 
-
         public async Task<IActionResult> UpdateProductAsync(int productId, Product updateModel)
         {
             var productToUpdate = await _dbContext.Products
@@ -220,7 +219,6 @@ namespace Booking.Services
 
             return new OkObjectResult(deleteSuccessResponse);
         }
-
 
     }
 }

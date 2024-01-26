@@ -96,5 +96,25 @@ namespace Booking.Services
           
             return new OkObjectResult(updateSuccessResponse);
         }
+
+        public async Task<IActionResult> DeleteAllProductTypeAsync(int productTypeId)
+        {
+            var ProducttypesToDelete = await _dbContext.Producttypes.FindAsync(productTypeId);
+
+            if (ProducttypesToDelete == null)
+            {
+                return new NotFoundObjectResult("Not found Producttypes");
+            }
+
+            _dbContext.Producttypes.Remove(ProducttypesToDelete);
+            await _dbContext.SaveChangesAsync();
+
+            var deleteSuccessResponse = new
+            {
+                Message = "Producttypes deleted successfully"
+            };
+
+            return new OkObjectResult(deleteSuccessResponse);
+        }
     }
 }

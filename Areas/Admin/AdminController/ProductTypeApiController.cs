@@ -74,5 +74,30 @@ namespace Booking.Areas.Admin.AdminController {
             
             }
         }
+
+        [HttpDelete("deleteAll")]
+        public async Task<IActionResult> DeleteProductTypessAsync([FromBody] List<int> productTypeId)
+        {
+            try
+            {
+                foreach (var ProductTypeId in productTypeId)
+                {
+                    var result = await _productTypeSevices.DeleteAllProductTypeAsync(ProductTypeId);
+                }
+
+                var deleteSuccessResponse = new
+                {
+                    Message = "ProductType deleted successfully"
+                };
+
+                return new OkObjectResult(deleteSuccessResponse);
+            }
+            catch (Exception ex)
+            {
+                // Log the exception details
+                Console.Error.WriteLine($"Error deleting ProductType: {ex.Message}");
+                return new StatusCodeResult(500);
+            }
+        }
     }
 }

@@ -17,15 +17,15 @@ namespace Booking.Areas.Admin.AdminController {
         [HttpGet] 
         public async Task<IActionResult> GetAllServicesType() {
             
-            var ServicesTypesWithFullInfo = await _servicesTypeServices.GetAllServicesType();
+            var ServicesTypesWithFullInfo = await _servicesTypeServices.GetAllServicesTypes();
             
             return Ok(ServicesTypesWithFullInfo);
         }
-        
+
         [HttpPost("create")]
         public async Task<IActionResult> CreateServicesType(Servicetype registrationModel) {
            
-            var result = await _servicesTypeServices.CreateServiceType(registrationModel);
+            var result = await _servicesTypeServices.CreateServicesType(registrationModel);
            
             if (result is OkObjectResult okResult) {
                 return Ok(okResult.Value);
@@ -35,10 +35,10 @@ namespace Booking.Areas.Admin.AdminController {
             return StatusCode(500, "Internal Server Error");
         }
 
-        [HttpDelete("delete/{ServiceTypeId}")]
-        public async Task<IActionResult> DeleteServiceTypesAsync(int ServiceTypeId) {
+        [HttpDelete("delete/{serviceTypeId}")]
+        public async Task<IActionResult> DeleteServiceTypesAsync(int serviceTypeId) {
             
-            var result = await _servicesTypeServices.DeleteService(ServiceTypeId);
+            var result = await _servicesTypeServices.DeleteServicesType(serviceTypeId);
 
             if (result is OkObjectResult okResult) {
             
@@ -55,10 +55,35 @@ namespace Booking.Areas.Admin.AdminController {
             }
         }
 
-        [HttpPut("update/{ServiceTypeId}")]
-        public async Task<IActionResult> UpdateServiceTypesAsync(int ServiceTypeId, Servicetype servicetype) {
+        [HttpDelete("deleteAll")]
+        public async Task<IActionResult> DeleteAllServiceTypesAsync([FromBody] List<int> serviceTypeId)
+        {
+            try
+            {
+                foreach (var ServiceTypeId in serviceTypeId)
+                {
+                    var result = await _servicesTypeServices.DeleteServicesType(ServiceTypeId);
+                }
+
+                var deleteSuccessResponse = new
+                {
+                    Message = "serviceType deleted successfully"
+                };
+
+                return new OkObjectResult(deleteSuccessResponse);
+            }
+            catch (Exception ex)
+            {
+                // Log the exception details
+                Console.Error.WriteLine($"Error deleting serviceType: {ex.Message}");
+                return new StatusCodeResult(500);
+            }
+        }
+
+        [HttpPut("update/{serviceTypeId}")]
+        public async Task<IActionResult> UpdateServiceTypesAsync(int serviceTypeId, Servicetype servicetype) {
            
-            var result = await _servicesTypeServices.UpdateServiceTypeAsync(ServiceTypeId, servicetype);
+            var result = await _servicesTypeServices.UpdateServicesType(serviceTypeId, servicetype);
 
             if(result is OkObjectResult okResult) {
 

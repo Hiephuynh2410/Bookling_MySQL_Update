@@ -18,8 +18,7 @@ namespace Booking.Areas.Admin
             _httpClient = new HttpClient();
         }
 
-
-        //View
+         //View
         public async Task<IActionResult> Index()
         {
 
@@ -27,19 +26,74 @@ namespace Booking.Areas.Admin
             if (apiResponse.IsSuccessStatusCode)
             {
                 var responseContent = await apiResponse.Content.ReadAsStringAsync();
-                var Servicetype = JsonConvert.DeserializeObject<List<Servicetype>>(responseContent);
+                var servicetypes = JsonConvert.DeserializeObject<List<Servicetype>>(responseContent);
 
-                return View(Servicetype);
+                return View(servicetypes);
             }
             else
             {
-                var Servicetype = await db.Servicetypes
+                var servicetypesList = await db.Servicetypes
                    .ToListAsync();
-                return View(Servicetype);
+                return View(servicetypesList);
             }
         }
 
-         //create
+         //Delete
+        public async Task<IActionResult> Delete(int serviceTypeId)
+        {
+            var apiUrl = $"http://localhost:5196/api/ServiceTypeApi/delete/{serviceTypeId}";
+
+            var response = await _httpClient.DeleteAsync(apiUrl);
+
+            if (response.IsSuccessStatusCode)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                var responseContent = await response.Content.ReadAsStringAsync();
+                Console.WriteLine("API Response Content: " + responseContent);
+
+                var errorResponse = JsonConvert.DeserializeObject<object>(responseContent);
+
+                string errorMessage = errorResponse?.ToString() ?? "An error occurred.";
+
+                return Json(new { success = false, messag = "Failed to delete productTypes" });
+
+            }
+        }
+
+        //Delte All
+        [HttpPost]
+        public async Task<IActionResult> DeleteServiceType([FromBody] List<int> serviceTypeId)
+        {
+            var apiUrl = "http://localhost:5196/api/ServiceTypeApi/deleteAll/";
+
+            using (var httpClient = new HttpClient())
+            {
+                var json = JsonConvert.SerializeObject(serviceTypeId);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+                var response = await httpClient.PostAsync(apiUrl, content);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    return Json(new { success = true, message = "serviceType deleted successfully" });
+                }
+                else
+                {
+                    var responseContent = await response.Content.ReadAsStringAsync();
+                    Console.WriteLine("API Response Content: " + responseContent);
+
+                    var errorResponse = JsonConvert.DeserializeObject<object>(responseContent);
+                    string errorMessage = errorResponse?.ToString() ?? "An error occurred.";
+
+                    return Json(new { success = false, message = errorMessage });
+                }
+            }
+        }
+    
+        //create
         public IActionResult Create()
         {
             return View();
@@ -60,7 +114,7 @@ namespace Booking.Areas.Admin
 
             if (response.IsSuccessStatusCode)
             {
-                return Json(new { success = true, message = "service type created successfully" });
+                return Json(new { success = true, message = "Service type created successfully" });
             }
             else
             {
@@ -74,56 +128,30 @@ namespace Booking.Areas.Admin
                 return Json(new { success = false, messag = "Failed to create product type" });
 
             }
-            
         }
-         
-         //Delete
-        public async Task<IActionResult> Delete(int ServiceTypeId)
-        {
-            var apiUrl = $"http://localhost:5196/api/ServiceTypeApi/delete/{ServiceTypeId}";
-
-            var response = await _httpClient.DeleteAsync(apiUrl);
-
-            if (response.IsSuccessStatusCode)
-            {
-                return RedirectToAction("Index");
-            }
-            else
-            {
-                var responseContent = await response.Content.ReadAsStringAsync();
-                Console.WriteLine("API Response Content: " + responseContent);
-
-                var errorResponse = JsonConvert.DeserializeObject<object>(responseContent);
-
-                string errorMessage = errorResponse?.ToString() ?? "An error occurred.";
-
-                return Json(new { success = false, messag = "Failed to delete ServiceType" });
-
-            }
-        }
-
+   
         //edit
         [HttpGet]
         public IActionResult Edit(int serviceTypeId)
         {
            
-            var ServiceTypeId = db.Servicetypes.Find(serviceTypeId);
+            var serviceType = db.Servicetypes.Find(serviceTypeId);
 
-            if (ServiceTypeId == null)
+            if (serviceType == null)
             {
                 return NotFound();
             }
-            return View(ServiceTypeId);
+            return View(serviceType);
         }
         [HttpPost]
-        public async Task<IActionResult> Edit(int ServiceTypeId, Servicetype updateModel)
+        public async Task<IActionResult> Edit(int serviceTypeId, Servicetype updateModel)
         {
             if (!ModelState.IsValid)
             {
                 return View(updateModel);
             }
           
-            var apiUrl = $"http://localhost:5196/api/ServiceTypeApi/update/{ServiceTypeId}";
+            var apiUrl = $"http://localhost:5196/api/ServiceTypeApi/update/{serviceTypeId}";
 
             var json = JsonConvert.SerializeObject(updateModel);
             var content = new StringContent(json, Encoding.UTF8, "application/json");

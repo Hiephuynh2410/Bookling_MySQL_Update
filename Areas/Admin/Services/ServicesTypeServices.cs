@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Booking.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
+using NuGet.Protocol;
 
 namespace Booking.Services
 {
@@ -17,98 +18,84 @@ namespace Booking.Services
             _dbContext = dbContext;
         }
 
-        public async Task<List<object>> GetAllServicesType()
-        {
-            var serviceTypes = await _dbContext.Servicetypes
-                .ToListAsync();
+        public async Task<List<object>> GetAllServicesTypes() {
+            var ServicesTypes = await _dbContext.Servicetypes.ToListAsync();
 
-            return serviceTypes.Select(s => new
-            {
-                s.ServiceTypeId,
-                s.Name,
+            return ServicesTypes.Select(p => new {
+                p.ServiceTypeId,
+                p.Name
             }).Cast<object>().ToList();
         }
 
-        public async Task<IActionResult> CreateServiceType(Servicetype servicetype)
-        {
-            try
-            {
-                _dbContext.Servicetypes.Add(servicetype);
-                await _dbContext.SaveChangesAsync();
+        public async Task<IActionResult> CreateServicesType(Servicetype servicetype) {
+            try {
+                    _dbContext.Servicetypes.Add(servicetype);
+                    await _dbContext.SaveChangesAsync();
 
-                var createdServicetype = await _dbContext.Servicetypes
-                    .FirstOrDefaultAsync(p => p.ServiceTypeId == servicetype.ServiceTypeId);
+                    var CreatedServicestType = await _dbContext.Servicetypes
+                        .FirstOrDefaultAsync(p => p.ServiceTypeId == servicetype.ServiceTypeId);
 
-                if(createdServicetype != null) {
-                    var result = new
-                    {
-                        createdServicetype.ServiceTypeId,
-                        createdServicetype.Name,
-                    };
-
-                    return new OkObjectResult(result);
-                } else {
-                    return new NotFoundResult();
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.Error.WriteLine($"Error creating service types: {ex.Message}");
-                 return new StatusCodeResult(500);
-            }
-        }
-
-        public async Task<IActionResult> DeleteService(int ServiceTypeId)
-        {
-            try
-            {
-                var ServiceType = await _dbContext.Servicetypes.FindAsync(ServiceTypeId);
-
-                if (ServiceType == null)
-                {
-                    return new NotFoundObjectResult("Service type not found.");
-                }
-
-                _dbContext.Servicetypes.Remove(ServiceType);
-                await _dbContext.SaveChangesAsync();
-
-                var deleteSuccessResponse = new
-                {
-                    Message = "Service Type deleted successfully",
-                };
-
-                return new OkObjectResult(deleteSuccessResponse);
-            }
-            catch (Exception ex)
-            {
-                Console.Error.WriteLine($"Error deleting product: {ex.Message}");
+                    if(CreatedServicestType != null) {
+                        var result = new {
+                            CreatedServicestType.ServiceTypeId,
+                            CreatedServicestType.Name,
+                        };
+                        return new OkObjectResult(result);
+                    } else {
+                        return new NotFoundResult();
+                    }
+               
+            } catch (Exception ex) {
+                Console.Error.WriteLine($"Error creating Service type: {ex.Message}");
                 return new StatusCodeResult(500);
             }
         }
 
-        public async Task<IActionResult> UpdateServiceTypeAsync(int ServiceTypeId, Servicetype updateModel)
-        {
-            var ServicetypeToUpdate = await _dbContext.Servicetypes
-                .FirstOrDefaultAsync(p => p.ServiceTypeId == ServiceTypeId);
-            if (ServicetypeToUpdate == null)
-            {
-                return new NotFoundObjectResult("Not found Service type");
-            }
+        public async Task<IActionResult> DeleteServicesType(int serviceTypeId) {
+            try {
+                var serviceType = await _dbContext.Servicetypes.FindAsync(serviceTypeId);
+                if(serviceType == null) {
+                    return new NotFoundObjectResult("serviceType not found");
+                }
+                _dbContext.Servicetypes.Remove(serviceType);
+                await _dbContext.SaveChangesAsync();
 
-            if (!string.IsNullOrWhiteSpace(updateModel.Name))
-            {
-                ServicetypeToUpdate.Name = updateModel.Name;
-            }
+                var deleteSuccessResponse = new {
+                    Message = "serviceType deleted successfully",
+                    serviceTypeId = serviceType.ServiceTypeId,
+                    Name = serviceType.Name
+                };
+                
+                return new OkObjectResult(deleteSuccessResponse);
 
+            } catch (Exception ex) {
+                Console.Error.WriteLine($"Error deleting serviceType: {ex.Message}");
+                return new StatusCodeResult(500);
+            }
+        }
+    
+        public async Task<IActionResult> UpdateServicesType(int serviceTypeId, Servicetype serviceTypes) { 
+
+            var serviceTypesUpdate = await _dbContext.Servicetypes
+                .FirstOrDefaultAsync(x => x.ServiceTypeId == serviceTypeId);
+
+            if (serviceTypesUpdate == null) {
+                return new NotFoundObjectResult("Not found serviceTypes");
+            }
             
-            _dbContext.Entry(ServicetypeToUpdate).State = EntityState.Modified;
-            await _dbContext.SaveChangesAsync();
-
-            var updateSuccessResponse = new
+            if (!string.IsNullOrWhiteSpace(serviceTypesUpdate.Name))
             {
-                Message = "Service type updated successfully"
-            };
+                serviceTypesUpdate.Name = serviceTypes.Name;
+            }
 
+            _dbContext.Entry(serviceTypesUpdate).State = EntityState.Modified;
+            await _dbContext.SaveChangesAsync();
+            
+            var updateSuccessResponse = new {
+                Message = "service type updated successfully",
+                Name = serviceTypes.Name
+            };
+          
             return new OkObjectResult(updateSuccessResponse);
         }
     }

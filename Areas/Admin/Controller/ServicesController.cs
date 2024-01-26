@@ -17,6 +17,31 @@ namespace Booking.Areas.Admin
             _httpClient = new HttpClient();
         }
 
+         //Delete
+        public async Task<IActionResult> Delete(int ServiceId)
+        {
+          
+            var apiUrl = $"http://localhost:5196/api/ServicesApi/delete/{ServiceId}";
+
+            var response = await _httpClient.DeleteAsync(apiUrl);
+
+            if (response.IsSuccessStatusCode)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                var responseContent = await response.Content.ReadAsStringAsync();
+                Console.WriteLine("API Response Content: " + responseContent);
+
+                var errorResponse = JsonConvert.DeserializeObject<object>(responseContent);
+
+                string errorMessage = errorResponse?.ToString() ?? "An error occurred.";
+                return Json(new { success = false, messag = "Failed to create Services" });
+
+            }
+        }
+
         [HttpPost]
         public async Task<IActionResult> DeleteService([FromBody] List<int> serviceIds)
         {
