@@ -24,40 +24,84 @@ namespace Booking.Areas.Admin.AdminController
             return Ok(servicesWithFullInfo);
         }
 
-        // [HttpPost("create")]
-        // public async Task<IActionResult> CreateServicesAsync(Service registrationModel) 
-        // {
-        //     var result = await _serviceServices.CreateServiceAsync(registrationModel);
+        [HttpPost("create")]
+        public async Task<IActionResult> CreateServicesAsync(Service registrationModel) 
+        {
+            var result = await _serviceServices.CreateServiceAsync(registrationModel);
 
-        //     if (result is OkObjectResult okResult)
-        //     {
-        //         return Ok(okResult.Value);
-        //     }
-        //     else if (result is BadRequestObjectResult badRequestResult)
-        //     {
-        //         return BadRequest(badRequestResult.Value);
-        //     }
+            if (result is OkObjectResult okResult)
+            {
+                return Ok(okResult.Value);
+            }
+            else if (result is BadRequestObjectResult badRequestResult)
+            {
+                return BadRequest(badRequestResult.Value);
+            }
 
-        //     return StatusCode(500, "Internal Server Error");
-        // }
+            return StatusCode(500, "Internal Server Error");
+        }
     
-        // [HttpPut("update/{serviceId}")]
-        // public async Task<IActionResult> UpdateProductsAsync(int serviceId, Service updateModel) 
-        // {
-        //     var result = await _serviceServices.UpdateServiceAsync(serviceId, updateModel);
+        [HttpPut("update/{serviceId}")]
+        public async Task<IActionResult> UpdateServicesAsync(int serviceId, Service updateModel) 
+        {
+            var result = await _serviceServices.UpdateServiceAsync(serviceId, updateModel);
 
-        //     if (result is OkObjectResult okResult)
-        //     {
-        //         return Ok(okResult.Value);
-        //     }
-        //     else if (result is NotFoundObjectResult notFoundResult)
-        //     {
-        //         return NotFound(notFoundResult.Value);
-        //     }
-        //     else
-        //     {
-        //         return StatusCode(500, "Internal Server Error");
-        //     }
-        // }
+            if (result is OkObjectResult okResult)
+            {
+                return Ok(okResult.Value);
+            }
+            else if (result is NotFoundObjectResult notFoundResult)
+            {
+                return NotFound(notFoundResult.Value);
+            }
+            else
+            {
+                return StatusCode(500, "Internal Server Error");
+            }
+        }
+
+        [HttpDelete("delete/{serviceId}")]
+        public async Task<IActionResult> DeleteServicesAsync(int serviceId) 
+        {
+            var result = await _serviceServices.DeleteServiceAsync(serviceId);
+
+            if (result is OkObjectResult okResult)
+            {
+                return Ok(okResult.Value);
+            }
+            else if (result is NotFoundObjectResult notFoundResult)
+            {
+                return NotFound(notFoundResult.Value);
+            }
+            else
+            {
+                return StatusCode(500, "Internal Server Error");
+            }
+        }
+
+         [HttpDelete("deleteAll")]
+        public async Task<IActionResult> DeleteAllServicesAsync([FromBody] List<int> serviceId)
+        {
+            try
+            {
+                foreach (var ServiceId in serviceId)
+                {
+                    var result = await _serviceServices.DeleteServiceAsync(ServiceId);
+                }
+
+                var deleteSuccessResponse = new
+                {
+                    Message = "service deleted successfully"
+                };
+
+                return new OkObjectResult(deleteSuccessResponse);
+            }
+            catch (Exception ex)
+            {
+                // Log the exception details
+                Console.Error.WriteLine($"Error deleting service: {ex.Message}");
+                return new StatusCodeResult(500);
+            }
+        }
     }
 }

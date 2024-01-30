@@ -15,8 +15,8 @@ var connectionString = builder.Configuration.GetConnectionString("BookingCatToc"
 
 builder.Services.AddDbContext<DlctContext>(options => {
     options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
-
 });
+
 //register Services
 builder.Services.AddServices();
 

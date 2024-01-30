@@ -4,7 +4,6 @@ using System.Threading.Tasks;
 using Booking.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
-using System.Net;
 
 namespace Booking.Services
 {
@@ -29,103 +28,119 @@ namespace Booking.Services
                 s.Name,
                 s.Price,
                 s.Status,
-                s.ServiceType,
+                s.ServiceTypeId,
                 s.CreatedAt,
                 s.UpdatedAt,
                 s.CreatedBy,
                 s.UpdatedBy,
-                // ServiceTypes = new
-                // {
-                //     Name = s.ServiceType?.Name
-                // },
-               
+                ServiceType = new {
+                    Name = s.ServiceType?.Name
+                }
             }).Cast<object>().ToList();
         }
         
-        // public async Task<IActionResult> CreateServiceAsync(Service service)
-        // {
-        //     try
-        //     {
-        //         if (service.ServiceTypeId == null)
-        //         {
-        //             return new BadRequestObjectResult("Service type are required.");
-        //         }
+        public async Task<IActionResult> CreateServiceAsync(Service service) {
+            try
+            {
+               
+                service.CreatedAt = DateTime.Now.Date;
+                
+                _dbContext.Services.Add(service);
+                await _dbContext.SaveChangesAsync();
 
-        //         service.CreatedAt = DateTime.Now;
-        //         service.Status = true;
+                var createdService = await _dbContext.Services
+                    .Include(s => s.ServiceType)
+                    .FirstOrDefaultAsync(p => p.ServiceId == service.ServiceId);
 
-        //         _dbContext.Services.Add(service);
-        //         await _dbContext.SaveChangesAsync();
+                if(createdService != null) {
+                    var result = new
+                    {
+                        createdService.ServiceId,
+                        createdService.Name,
+                        createdService.Price,
+                        createdService.ServiceTypeId,
+                        createdService.CreatedAt,
+                        createdService.UpdatedAt,
+                        createdService.CreatedBy,
+                        createdService.UpdatedBy,
+                        ServiceType = new
+                        {
+                            Name = createdService.ServiceType?.Name
+                        },
 
-        //         var createdService = await _dbContext.Services
-        //             .Include(s => s.ServiceType)
-        //             .FirstOrDefaultAsync(p => p.ServiceId == service.ServiceId);
+                    };
 
-        //         if(createdService != null) {
-        //             var result = new
-        //             {
-        //                 createdService.ServiceId,
-        //                 createdService.Name,
-        //                 createdService.Price,
-        //                 createdService.Status,
-        //                 createdService.ServiceTypeId,
-        //                 createdService.CreatedAt,
-        //                 createdService.UpdatedAt,
-        //                 createdService.CreatedBy,
-        //                 createdService.UpdatedBy,
-        //                 ServiceTypes = new
-        //                 {
-        //                     Name = createdService.ServiceType?.Name
-        //                 },
-        //             };
+                    return new OkObjectResult(result);
+                } else {
+                    return new NotFoundResult();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.Error.WriteLine($"Error creating product: {ex.Message}");
+                 return new StatusCodeResult(500);
+            }
+        }
 
-        //             return new OkObjectResult(result);
-        //         } else {
-        //             return new NotFoundResult();
-        //         }
-        //     }
-        //     catch (Exception ex)
-        //     {
-        //         Console.Error.WriteLine($"Error creating Service: {ex.Message}");
-        //          return new StatusCodeResult(500);
-        //     }
-        // }
+        public async Task<IActionResult> UpdateServiceAsync(int serviceId, Service updateModel)
+        {
+            var serviceToUpdate = await _dbContext.Services
+                .Include(p => p.ServiceType)
+                .FirstOrDefaultAsync(p => p.ServiceId == serviceId);
+            
+            if (serviceToUpdate == null)
+            {
+                return new NotFoundObjectResult("Not found Service");
+            }
 
-        // public async Task<IActionResult> UpdateServiceAsync(int serviceId, Service updateModel)
-        // {
-        //     var ServiceToUpdate = await _dbContext.Services
-        //         .Include(p => p.ServiceType)
-        //         .FirstOrDefaultAsync(p => p.ServiceId == serviceId);
-        //     if (ServiceToUpdate == null)
-        //     {
-        //         return new NotFoundObjectResult("Not found Service");
-        //     }
+            if (updateModel.ServiceTypeId.HasValue)
+            {
+                var updatedServiceType = await _dbContext.Servicetypes.FindAsync(updateModel.ServiceTypeId);
+                if (updatedServiceType != null)
+                {
+                    serviceToUpdate.ServiceType = updatedServiceType;
+                }
+            }
 
-        //     if (!string.IsNullOrWhiteSpace(updateModel.Name))
-        //     {
-        //         ServiceToUpdate.Name = updateModel.Name;
-        //     }
+            serviceToUpdate.UpdatedAt = DateTime.Now;
+            
+            _dbContext.Entry(serviceToUpdate).State = EntityState.Modified;
+            await _dbContext.SaveChangesAsync();
 
-        //     if (updateModel.ServiceTypeId.HasValue)
-        //     {
-        //         var updatedServiceType = await _dbContext.Servicetypes.FindAsync(updateModel.ServiceTypeId);
-        //         if (updatedServiceType != null)
-        //         {
-        //             updatedServiceType.ServiceTypeId = serviceId;
-        //         }
-        //     }
+            var updateSuccessResponse = new
+            {
+                Message = "Service updated successfully"
+            };
 
-        //     ServiceToUpdate.UpdatedAt = DateTime.Now;
+            return new OkObjectResult(updateSuccessResponse);
+        }
+    
+        public async Task<IActionResult> DeleteServiceAsync(int serviceId)
+        {
+            try
+            {
+                var service = await _dbContext.Services.FindAsync(serviceId);
 
-        //     _dbContext.Entry(ServiceToUpdate).State = EntityState.Modified;
-        //     await _dbContext.SaveChangesAsync();
+                if (service == null)
+                {
+                    return new NotFoundObjectResult("service not found.");
+                }
 
-        //     var updateSuccessResponse = new
-        //     {
-        //         Message = "Service updated successfully"
-        //     };
+                _dbContext.Services.Remove(service);
+                await _dbContext.SaveChangesAsync();
 
-        //     return new OkObjectResult(updateSuccessResponse);
-        // }
+                var deleteSuccessResponse = new
+                {
+                    Message = "service deleted successfully",
+                };
+
+                return new OkObjectResult(deleteSuccessResponse);
+            }
+            catch (Exception ex)
+            {
+                Console.Error.WriteLine($"Error deleting service: {ex.Message}");
+                return new StatusCodeResult(500);
+            }
+        }
     }
 }
