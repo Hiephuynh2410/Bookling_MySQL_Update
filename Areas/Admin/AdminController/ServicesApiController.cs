@@ -98,7 +98,6 @@ namespace Booking.Areas.Admin.AdminController
             }
             catch (Exception ex)
             {
-                // Log the exception details
                 Console.Error.WriteLine($"Error deleting service: {ex.Message}");
                 return new StatusCodeResult(500);
             }

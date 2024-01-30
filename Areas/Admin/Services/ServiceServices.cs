@@ -44,7 +44,7 @@ namespace Booking.Services
             {
                
                 service.CreatedAt = DateTime.Now.Date;
-                
+                service.Status = true;
                 _dbContext.Services.Add(service);
                 await _dbContext.SaveChangesAsync();
 

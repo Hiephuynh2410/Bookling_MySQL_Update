@@ -1,4 +1,4 @@
-function deleteSelectedProducts(ServicesId) {
+function deleteSelectedServices(ProductId) {
     var apiUrl = '/api/ServicesApi/deleteAll/';
 
     fetch(apiUrl, {
@@ -6,7 +6,7 @@ function deleteSelectedProducts(ServicesId) {
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify(ServicesId),
+        body: JSON.stringify(ProductId),
     })
     .then(response => {
         if (response.ok) {
@@ -22,12 +22,12 @@ function deleteSelectedProducts(ServicesId) {
             alert(result.message);
             window.location.reload();
         } else {
-            alert('delete Success service: ' + result.message);
+            alert('Failed to delete ServiceType: ' + result.message);
             window.location.reload();
         }
     })
     .catch(error => {
-        console.error('Error deleting services:', error);
+        console.error('Error deleting ServiceType:', error);
         alert('Delete Successfull.');
         window.location.reload();
     });
@@ -56,11 +56,11 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         if (selectedProductIds.length > 0) {
-            console.log('Selected services IDs:', selectedProductIds);
-            deleteSelectedProducts(selectedProductIds);
+            console.log('Selected Product IDs:', selectedProductIds);
+            deleteSelectedServices(selectedProductIds);
             window.location.reload();
         } else {
-            console.log('No services selected.');
+            console.log('No products selected.');
         }
     });
 
@@ -77,13 +77,12 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-
-function navigateTo(action, ServicesId) {
-    window.location.href = `/Admin/Services/${action}?ServicesId=${ServicesId}`;
+function navigateTo(action, ServiceId) {
+    window.location.href = `/Admin/Services/${action}?ServiceId=${ServiceId}`;
 }
 
-function deleteStaff(ServicesId) {
-    if (confirm('Are you sure you want to delete this Services?')) {
-        navigateTo('Delete', ServicesId);
+function deleteStaff(ServiceId) {
+    if (confirm('Are you sure you want to delete this Service?')) {
+        navigateTo('Delete', ServiceId);
     }
 }

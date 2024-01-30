@@ -17,87 +17,11 @@ namespace Booking.Areas.Admin
             _httpClient = new HttpClient();
         }
 
-         //Delete
-        public async Task<IActionResult> Delete(int ServiceId)
-        {
-          
-            var apiUrl = $"http://localhost:5196/api/ServicesApi/delete/{ServiceId}";
-
-            var response = await _httpClient.DeleteAsync(apiUrl);
-
-            if (response.IsSuccessStatusCode)
-            {
-                return RedirectToAction("Index");
-            }
-            else
-            {
-                var responseContent = await response.Content.ReadAsStringAsync();
-                Console.WriteLine("API Response Content: " + responseContent);
-
-                var errorResponse = JsonConvert.DeserializeObject<object>(responseContent);
-
-                string errorMessage = errorResponse?.ToString() ?? "An error occurred.";
-                return Json(new { success = false, messag = "Failed to create Services" });
-
-            }
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> DeleteService([FromBody] List<int> serviceIds)
-        {
-            var apiUrl = "http://localhost:5196/api/ServiceApi/deleteAll";
-
-            using (var httpClient = new HttpClient())
-            {
-                var json = JsonConvert.SerializeObject(serviceIds);
-                var content = new StringContent(json, Encoding.UTF8, "application/json");
-
-                var response = await httpClient.PostAsync(apiUrl, content);
-
-                if (response.IsSuccessStatusCode)
-                {
-                    return Json(new { success = true, message = "service deleted successfully" });
-                }
-                else
-                {
-                    var responseContent = await response.Content.ReadAsStringAsync();
-                    Console.WriteLine("API Response Content: " + responseContent);
-
-                    var errorResponse = JsonConvert.DeserializeObject<object>(responseContent);
-                    string errorMessage = errorResponse?.ToString() ?? "An error occurred.";
-
-                    return Json(new { success = false, message = errorMessage });
-                }
-            }
-        }
-
-        //View
-        public async Task<IActionResult> Index()
-        {
-
-            var apiResponse = await _httpClient.GetAsync("http://localhost:5196/api/ServicesApi/");
-            if (apiResponse.IsSuccessStatusCode)
-            {
-                var responseContent = await apiResponse.Content.ReadAsStringAsync();
-                var services = JsonConvert.DeserializeObject<List<Service>>(responseContent);
-                return View(services);
-            }
-            else
-            {
-                var ServicesList = await db.Services
-                   .Include(s => s.ServiceType)
-                   .ToListAsync();
-                return View(ServicesList);
-            }
-        }
-
-       //create
+        //create
         public IActionResult Create()
         {
-          
             var serviceTypes = db.Servicetypes.ToList();
             ViewBag.serviceTypes = new SelectList(serviceTypes, "ServiceTypeId", "Name");
-
             return View();
         }
 
@@ -105,8 +29,27 @@ namespace Booking.Areas.Admin
         public async Task<IActionResult> Create(Service registrationModel)
         {
             var apiUrl = "http://localhost:5196/api/ServicesApi/create";
+            if (string.IsNullOrEmpty(registrationModel.Name) && string.IsNullOrEmpty(registrationModel.Price.ToString()))
+            {
+                ModelState.AddModelError("Name", "cannot be empty.");
+                ModelState.AddModelError("Price", "cannot be empty.");
+            }
+            // if (registrationModel.Price <= 0)
+            // {
+            //     ModelState.AddModelError("Price", "Price must be greater than 0.");
+            // }
+
+            // if (string.IsNullOrEmpty(Request.Form["ServiceTypeId"]))
+            // {
+            //     ModelState.AddModelError("ServiceTypeId", "ServiceType is required.");
+            // }
             if (ModelState.IsValid)
             {
+                // int createdByUserId;
+                // if (int.TryParse(HttpContext.Session.GetString("UserId"), out createdByUserId))
+                // {
+                //     registrationModel.CreatedBy = createdByUserId;
+                // }
                 registrationModel.Status = Request.Form["Status"] == "true";
                 var json = JsonConvert.SerializeObject(registrationModel);
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
@@ -115,16 +58,30 @@ namespace Booking.Areas.Admin
 
                 if (response.IsSuccessStatusCode)
                 {
-                     return Json(new { success = true, message = "Service created successfully" });
+                    return Json(new { success = true, message = "Service created successfully" });
+
                 }
                 else
                 {
                     var responseContent = await response.Content.ReadAsStringAsync();
                     Console.WriteLine("API Response Content: " + responseContent);
 
-                    var errorResponse = JsonConvert.DeserializeObject<object>(responseContent);
-                    
-                    string errorMessage = errorResponse?.ToString() ?? "An error occurred.";
+                    dynamic errorResponse = JsonConvert.DeserializeObject(responseContent);
+
+                    if (errorResponse != null)
+                    {
+                        if (!string.IsNullOrEmpty(errorResponse.Message))
+                        {
+                            ModelState.AddModelError("", errorResponse.Message);
+                        }
+                        if (errorResponse.Errors != null)
+                        {
+                            foreach (var error in errorResponse.Errors)
+                            {
+                                ModelState.AddModelError("", error.ToString());
+                            }
+                        }
+                    }
 
                     var serviceTypes = db.Servicetypes.ToList();
                     ViewBag.serviceTypes = new SelectList(serviceTypes, "ServiceTypeId", "Name");
@@ -140,5 +97,27 @@ namespace Booking.Areas.Admin
                 return View(registrationModel);
             }
         }
+
+        //View
+        public async Task<IActionResult> Index()
+        {
+
+            var apiResponse = await _httpClient.GetAsync("http://localhost:5196/api/ServicesApi/");
+            if (apiResponse.IsSuccessStatusCode)
+            {
+                var responseContent = await apiResponse.Content.ReadAsStringAsync();
+                var services = JsonConvert.DeserializeObject<List<Service>>(responseContent);
+
+                return View(services);
+            }
+            else
+            {
+                var servicesList = await db.Services
+                   .Include(s => s.ServiceType)
+                   .ToListAsync();
+                return View(servicesList);
+            }
+        }
+         
     }
 }
