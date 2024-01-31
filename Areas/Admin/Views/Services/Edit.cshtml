@@ -1,0 +1,53 @@
+@model Booking.Models.Service
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    <link href="~/assets/css/style.css" rel="stylesheet" />
+}
+
+<section>
+    <div class="href-target" id="input-types"></div>
+    <h1>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-align-justify">
+            <line x1="21" y1="10" x2="3" y2="10" />
+            <line x1="21" y1="6" x2="3" y2="6" />
+            <line x1="21" y1="14" x2="3" y2="14" />
+            <line x1="21" y1="18" x2="3" y2="18" />
+        </svg>
+        Edit Services
+    </h1>
+    <p>All available input types are included</p>
+    <form asp-action="Edit" method="post">
+        <div id="message-container" class="alert" style="display:none;"></div>
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input type="hidden" asp-for="ServiceId" />
+
+        <div class="nice-form-group">
+            <label>Name</label>
+            <input asp-for="Name" type="text" placeholder="Name" value="@Model.Name" />
+        </div>
+
+        <div class="nice-form-group">
+            <label>Price</label>
+            <input asp-for="Price" type="number" style="width: 100%;" placeholder="Price" value="@Model.Price" />
+        </div>
+
+       <div class="nice-form-group">
+            <label>Services Type</label>
+            @Html.DropDownListFor(model => model.ServiceTypeId, (SelectList)ViewBag.serviceType, "Select a Type", new { @id = "select-productType" })
+        </div>
+
+        <div class="nice-form-group d-flex justify-content-center align-items-center">
+            <input type="submit" value="Update" class="btn mt-2 border border-1 border-solid w-80 " />
+        </div>
+    </form>
+
+    <details>
+        <summary>
+            <div class="toggle-code">
+                Created By Hiệp Huỳnh
+            </div>
+        </summary>
+    </details>
+</section>

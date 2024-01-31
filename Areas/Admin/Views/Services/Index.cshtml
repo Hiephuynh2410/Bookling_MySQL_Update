@@ -24,6 +24,7 @@
                     </th>
                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">ServiceId</th>
                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Name</th>
+                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Price</th>
                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">ServiceType</th>
                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Created At</th>
                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Updated At</th>
@@ -41,17 +42,23 @@
                     @foreach (var item in Model)
                     {
                         <tr id="productRow_@item.ServiceId" class="swipe-to-delete">
-                             <td class="align-middle text-center">
-                                  <input  type="checkbox" class="productCheckbox" data-product-id="@item.ServiceId" />
+                            <td class="align-middle text-center">
+                                <input  type="checkbox" class="productCheckbox" data-product-id="@item.ServiceId" />
                             </td>
                             <td>
                                 <div class="d-flex px-2 py-1">
                                     <div class="d-flex flex-column justify-content-center">
-                                        <h6 class="mb-0 text-sm">@item.Name</h6>
+                                        <h6 class="mb-0 text-sm">@item.ServiceId</h6>
                                     </div>
                                 </div>
                             </td>
                            
+                             <td class="align-middle text-center">
+                                <p class="text-xs text-secondary mb-0">@item.Name</p>
+                            </td>
+                               <td class="align-middle text-center">
+                                <p class="text-xs text-secondary mb-0">@item.Price</p>
+                            </td>
                              <td class="align-middle text-center">
                                 <p class="text-xs text-secondary mb-0">@item.ServiceType?.Name</p>
                             </td>

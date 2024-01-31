@@ -17,6 +17,107 @@ namespace Booking.Areas.Admin
             _httpClient = new HttpClient();
         }
 
+        //DeleteMultiple
+        [HttpPost]
+        public async Task<IActionResult> DeleteServices([FromBody] List<int> servicesId)
+        {
+            var apiUrl = "http://localhost:5196/api/ServicesApi/deleteAll/";
+
+            using (var httpClient = new HttpClient())
+            {
+                var json = JsonConvert.SerializeObject(servicesId);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+                var response = await httpClient.PostAsync(apiUrl, content);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    return Json(new { success = true, message = "services deleted successfully" });
+                }
+                else
+                {
+                    var responseContent = await response.Content.ReadAsStringAsync();
+                    Console.WriteLine("API Response Content: " + responseContent);
+
+                    var errorResponse = JsonConvert.DeserializeObject<object>(responseContent);
+                    string errorMessage = errorResponse?.ToString() ?? "An error occurred.";
+
+                    return Json(new { success = false, message = errorMessage });
+                }
+            }
+        }
+
+        //Delete
+        public async Task<IActionResult> Delete(int serviceId)
+        {
+          
+            var apiUrl = $"http://localhost:5196/api/ServicesApi/delete/{serviceId}";
+
+            var response = await _httpClient.DeleteAsync(apiUrl);
+
+            if (response.IsSuccessStatusCode)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                var responseContent = await response.Content.ReadAsStringAsync();
+                Console.WriteLine("API Response Content: " + responseContent);
+
+                var errorResponse = JsonConvert.DeserializeObject<object>(responseContent);
+
+                string errorMessage = errorResponse?.ToString() ?? "An error occurred.";
+                return Json(new { success = false, messag = "Failed to create services" });
+
+            }
+        }
+
+        //edit
+        [HttpGet]
+        public IActionResult Edit(int serviceId)
+        {
+            var services = db.Services.Find(serviceId);
+            var serviceType = db.Servicetypes.ToList();
+
+            ViewBag.serviceType = new SelectList(serviceType, "ServiceTypeId", "Name");
+            if (services == null)
+            {
+                return NotFound();
+            }
+            return View(services);
+        }
+        [HttpPost]
+        public async Task<IActionResult> Edit(int serviceId, Service updateModel)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(updateModel);
+            }
+          
+            var apiUrl = $"http://localhost:5196/api/ServicesApi/update/{serviceId}";
+
+            var json = JsonConvert.SerializeObject(updateModel);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            var response = await _httpClient.PutAsync(apiUrl, content);
+
+            if (response.IsSuccessStatusCode)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                var responseContent = await response.Content.ReadAsStringAsync();
+                Console.WriteLine("API Response Content: " + responseContent);
+
+                var errorResponse = JsonConvert.DeserializeObject<object>(responseContent);
+
+                string errorMessage = errorResponse?.ToString() ?? "An error occurred.";
+
+                return View(updateModel);
+            }
+        }
+
         //create
         public IActionResult Create()
         {
@@ -59,7 +160,6 @@ namespace Booking.Areas.Admin
                 if (response.IsSuccessStatusCode)
                 {
                     return Json(new { success = true, message = "Service created successfully" });
-
                 }
                 else
                 {

@@ -92,8 +92,13 @@ namespace Booking.Services
             {
                 return new NotFoundObjectResult("Not found Service");
             }
+            if (!string.IsNullOrWhiteSpace(updateModel.Name))
+            {
+                serviceToUpdate.Name = updateModel.Name;
+            }
+       
 
-            if (updateModel.ServiceTypeId.HasValue)
+             if (updateModel.ServiceTypeId.HasValue)
             {
                 var updatedServiceType = await _dbContext.Servicetypes.FindAsync(updateModel.ServiceTypeId);
                 if (updatedServiceType != null)
@@ -103,13 +108,16 @@ namespace Booking.Services
             }
 
             serviceToUpdate.UpdatedAt = DateTime.Now;
-            
+            serviceToUpdate.Price = updateModel.Price;
+
             _dbContext.Entry(serviceToUpdate).State = EntityState.Modified;
             await _dbContext.SaveChangesAsync();
 
             var updateSuccessResponse = new
             {
-                Message = "Service updated successfully"
+                Message = "Service updated successfully",
+                name = serviceToUpdate.Name,
+                price = serviceToUpdate.Price
             };
 
             return new OkObjectResult(updateSuccessResponse);
