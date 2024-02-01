@@ -10,6 +10,8 @@ public static class ServiceRegistrationExtensions
         services.AddScoped<BranchServices>();
         services.AddScoped<ServiceServices>();
         services.AddScoped<ServicesTypeServices>();
+        services.AddScoped<ProviderSerivces>();
+
         return services;
     }
 }

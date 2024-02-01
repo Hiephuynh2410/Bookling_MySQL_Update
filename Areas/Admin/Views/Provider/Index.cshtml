@@ -1,0 +1,76 @@
+@model IEnumerable<Booking.Models.Provider>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container-fluid py-4">
+    <a  onclick="window.location.href='/Admin/Provider/Create'" class="btn bg-gradient-primary w-100">Create</a>
+    <div class="row">
+    <div class="col-12">
+         <partial name="_SettingIcon"/>
+        <div class="card my-4">
+        <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+            <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+            <h6 class="text-white text-capitalize ps-3">Provider table</h6>
+            </div>
+        </div>
+        <div class="card-body px-0 pb-2">
+            <div class="table-responsive p-0">
+            <table class="table align-items-center mb-0">
+                <thead>
+                <tr>
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                        <input type="checkbox" id="selectAll" />
+                    </th>
+                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Name</th>
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Address</th>
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Phone</th>
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Mail</th>
+                    <th class="text-secondary opacity-7"></th>
+                    <button id="deleteSelected" class="btn btn-danger">Delete Selected</button>
+
+                </tr>
+
+                </thead>
+                <tbody>
+                @if (Model != null)
+                {
+                    @foreach (var item in Model)
+                    {
+                        <tr id="productRow_@item.ProviderId" class="swipe-to-delete">
+                            <td class="align-middle text-center">
+                                  <input  type="checkbox" class="productCheckbox" data-product-id="@item.ProviderId" />
+                            </td>
+                             <td class="align-middle text-center">
+                                <p class="text-xs text-secondary mb-0">@item.Name</p>
+                            </td>
+                            <td class="align-middle text-center text-sm">
+                                <p class="text-xs font-weight-bold mb-0">@item.Address</p>
+                            </td>
+                            <td class="align-middle text-center">
+                                <span class="text-secondary text-xs font-weight-bold">@item.Phone</span>
+                            </td>
+                            <td class="align-middle text-center">
+                                <span class="text-secondary text-xs font-weight-bold">@item.Email</span>
+                            </td>
+                            
+                            <td class="align-middle">
+                                <a onclick="navigateTo('Edit', @item.ProviderId)"  role="button" class="text-secondary btn font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
+                                    Edit
+                                </a>
+                                <a onclick="deleteStaff(@item.ProviderId)"  role="button" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
+                                    <i class="btn-outline-primary btn fa-solid fa-x"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                }
+                </tbody>
+            </table>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/assets/js/CRUD/CRUD_Provider.js"/> 
