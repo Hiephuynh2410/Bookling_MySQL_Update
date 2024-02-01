@@ -19,10 +19,10 @@ namespace Booking.Areas.Admin
 
 
         //Delete
-        public async Task<IActionResult> Delete(int productId)
+        public async Task<IActionResult> Delete(int providerId)
         {
           
-            var apiUrl = $"http://localhost:5196/api/ProductApi/delete/{productId}";
+            var apiUrl = $"http://localhost:5196/api/ProviderApi/delete/{providerId}";
 
             var response = await _httpClient.DeleteAsync(apiUrl);
 
@@ -38,20 +38,20 @@ namespace Booking.Areas.Admin
                 var errorResponse = JsonConvert.DeserializeObject<object>(responseContent);
 
                 string errorMessage = errorResponse?.ToString() ?? "An error occurred.";
-                return Json(new { success = false, messag = "Failed to create product" });
+                return Json(new { success = false, messag = "Failed to create provider" });
 
             }
         }
 
        
         [HttpPost]
-        public async Task<IActionResult> DeleteProducts([FromBody] List<int> productIds)
+        public async Task<IActionResult> DeleteProducts([FromBody] List<int> providerIds)
         {
-            var apiUrl = "http://localhost:5196/api/ProductApi/deleteAll";
+            var apiUrl = "http://localhost:5196/api/ProviderApi/deleteAll";
 
             using (var httpClient = new HttpClient())
             {
-                var json = JsonConvert.SerializeObject(productIds);
+                var json = JsonConvert.SerializeObject(providerIds);
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
 
                 var response = await httpClient.PostAsync(apiUrl, content);
