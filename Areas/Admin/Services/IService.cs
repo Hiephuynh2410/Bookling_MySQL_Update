@@ -1,4 +1,3 @@
-using Microsoft.Extensions.DependencyInjection;
 using Booking.Services;
 
 public static class ServiceRegistrationExtensions
@@ -11,7 +10,9 @@ public static class ServiceRegistrationExtensions
         services.AddScoped<ServiceServices>();
         services.AddScoped<ServicesTypeServices>();
         services.AddScoped<ProviderSerivces>();
-        services.AddScoped<LoginServices>();
+        services.AddScoped<LoginService>();
+        services.AddScoped<GenerateRandomKey>();
+
         return services;
     }
 }
