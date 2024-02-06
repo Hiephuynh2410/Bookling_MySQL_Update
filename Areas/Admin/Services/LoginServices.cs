@@ -107,12 +107,6 @@ namespace Booking.Services
                 var loginSuccessResponse = new
                 {
                     Token = token, 
-                    userID = staff.StaffId,
-                    Username = staff.Username,
-                    Name = staff.Name,
-                    phone = staff.Phone,
-                    Address = staff.Address,
-                    Email = staff.Email,
                     Message = "Login successful"
                 };
 

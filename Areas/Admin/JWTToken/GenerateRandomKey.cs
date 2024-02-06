@@ -20,6 +20,7 @@ namespace Booking.Services
 
         public string CreateToken(Staff staff)
         {
+            
             List<Claim> claims = new List<Claim>
             {
                 new Claim(ClaimTypes.Name, staff.Username)
