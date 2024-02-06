@@ -11,7 +11,7 @@ public static class ServiceRegistrationExtensions
         services.AddScoped<ServiceServices>();
         services.AddScoped<ServicesTypeServices>();
         services.AddScoped<ProviderSerivces>();
-
+        services.AddScoped<LoginServices>();
         return services;
     }
 }
