@@ -1,4 +1,6 @@
+using Booking.Models;
 using Booking.Services;
+using Microsoft.AspNetCore.Identity;
 
 public static class ServiceRegistrationExtensions
 {
@@ -12,7 +14,6 @@ public static class ServiceRegistrationExtensions
         services.AddScoped<ProviderSerivces>();
         services.AddScoped<LoginService>();
         services.AddScoped<GenerateRandomKey>();
-
         return services;
     }
 }

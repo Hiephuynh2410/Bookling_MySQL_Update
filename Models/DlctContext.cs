@@ -364,10 +364,12 @@ public partial class DlctContext : DbContext
 
             entity.HasOne(d => d.ProductType).WithMany(p => p.Products)
                 .HasForeignKey(d => d.ProductTypeId)
+                .OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("FK_PRODUCT_TYPE");
 
             entity.HasOne(d => d.Provider).WithMany(p => p.Products)
                 .HasForeignKey(d => d.ProviderId)
+                .OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("FK_PRODUCT_PROVIDER");
         });
 
@@ -497,6 +499,7 @@ public partial class DlctContext : DbContext
                 .HasMaxLength(255)
                 .HasColumnName("Created_by");
             entity.Property(e => e.Email).HasMaxLength(255);
+            entity.Property(e => e.LastFailedLoginAttempt).HasColumnType("datetime");
             entity.Property(e => e.Name).HasMaxLength(255);
             entity.Property(e => e.Password).HasMaxLength(255);
             entity.Property(e => e.Phone).HasMaxLength(10);

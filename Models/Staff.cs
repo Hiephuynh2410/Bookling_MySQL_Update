@@ -37,6 +37,10 @@ public partial class Staff
 
     public int? BranchId { get; set; }
 
+    public int? FailedLoginAttempts { get; set; }
+
+    public DateTime? LastFailedLoginAttempt { get; set; }
+
     public virtual ICollection<BlogPost> BlogPosts { get; set; } = new List<BlogPost>();
 
     public virtual ICollection<Booking> Bookings { get; set; } = new List<Booking>();

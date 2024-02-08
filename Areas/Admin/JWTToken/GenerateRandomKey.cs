@@ -8,7 +8,7 @@ using System.Security.Cryptography;
 namespace Booking.Services
 {
     public class GenerateRandomKey
-    {
+    {   
         private string GenerateRandomKeys(int length)
         {
             var random = new RNGCryptoServiceProvider();

@@ -76,7 +76,7 @@ namespace Booking.Services
             return new OkObjectResult(registrationSuccessResponse);
         }
 
-         public async Task<IActionResult> Login(Staff loginModel)
+        public async Task<IActionResult> Login(Staff loginModel)
         {
             if (string.IsNullOrWhiteSpace(loginModel.Username) || string.IsNullOrWhiteSpace(loginModel.Password))
             {
@@ -98,31 +98,54 @@ namespace Booking.Services
                 return new BadRequestObjectResult(loginErrorResponse);
             }
 
+            // kiểm tra nếu tài khoản này nâhpj sai quá 5 lần thì t sẽ block trong 5 p 
+            if (staff.FailedLoginAttempts >= 5 && staff.LastFailedLoginAttempt != null && DateTime.Now - staff.LastFailedLoginAttempt <= TimeSpan.FromMinutes(5))
+            {
+                var lockAccountResponse = new
+                {
+                    Message = "Account is locked due to multiple failed login attempts. Please try again later."
+                };
+                return new BadRequestObjectResult(lockAccountResponse);
+            }
+
             bool isPasswordValid = BCrypt.Net.BCrypt.Verify(loginModel.Password, staff.Password);
 
             if (isPasswordValid)
             {
-                string token =  _generateRandomKey.CreateToken(staff);
-                
+                // nó sẽ reset lại nếu use nhập đúng = 0 
+                staff.FailedLoginAttempts = 0;
+                staff.LastFailedLoginAttempt = null;
+                _dlctContext.SaveChanges();
+
+                string token = _generateRandomKey.CreateToken(staff);
+
                 var loginSuccessResponse = new
                 {
-                    Token = token, 
+                    Token = token,
                     Message = "Login successful"
                 };
 
-                return new OkObjectResult(token);
+                return new OkObjectResult(loginSuccessResponse);
             }
-
-            var invalidLoginErrorResponse = new
+            else
             {
-                Message = "Invalid username or password",
-                Errors = new List<string>
-                {
-                    "Invalid password"
-                }
-            };
+                // nếu nhập sai thì tiếp tục bị khoá 
+                staff.FailedLoginAttempts++;
+                staff.LastFailedLoginAttempt = DateTime.Now;
+                _dlctContext.SaveChanges();
 
-            return new BadRequestObjectResult(invalidLoginErrorResponse);
+                var invalidLoginErrorResponse = new
+                {
+                    Message = "Invalid username or password",
+                    Errors = new List<string>
+                    {
+                        "Invalid password"
+                    }
+                };
+
+                return new BadRequestObjectResult(invalidLoginErrorResponse);
+            }
         }
+
     }
 }
