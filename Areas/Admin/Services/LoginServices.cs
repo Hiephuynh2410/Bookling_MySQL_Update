@@ -99,11 +99,11 @@ namespace Booking.Services
             }
 
             // kiểm tra nếu tài khoản này nâhpj sai quá 5 lần thì t sẽ block trong 5 p 
-            if (staff.FailedLoginAttempts >= 5 && staff.LastFailedLoginAttempt != null && DateTime.Now - staff.LastFailedLoginAttempt <= TimeSpan.FromMinutes(5))
+            if (staff.FailedLoginAttempts >= 5 && staff.LastFailedLoginAttempt != null && DateTime.Now - staff.LastFailedLoginAttempt <= TimeSpan.FromMinutes(1))
             {
                 var lockAccountResponse = new
                 {
-                    Message = "Account is locked due to multiple failed login attempts. Please try again later."
+                    Message = "Account is locked 5min. Please try again later."
                 };
                 return new BadRequestObjectResult(lockAccountResponse);
             }
@@ -129,7 +129,7 @@ namespace Booking.Services
             }
             else
             {
-                // nếu nhập sai thì tiếp tục bị khoá 
+                // Increment failed login attempts
                 staff.FailedLoginAttempts++;
                 staff.LastFailedLoginAttempt = DateTime.Now;
                 _dlctContext.SaveChanges();

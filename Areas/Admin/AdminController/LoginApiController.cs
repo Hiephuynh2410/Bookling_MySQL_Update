@@ -18,7 +18,6 @@ namespace Booking.Areas.Admin.AdminController
 
         private readonly LoginService _loginService;
 
-
         public LoginApiController(DlctContext dlctContext,  LoginService loginService)
         {
             _dlctContext = dlctContext;

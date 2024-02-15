@@ -23,7 +23,11 @@ namespace Booking.Services
             
             List<Claim> claims = new List<Claim>
             {
-                new Claim(ClaimTypes.Name, staff.Username)
+                new Claim(ClaimTypes.Name, staff.Username ?? string.Empty),
+                new Claim(ClaimTypes.Email, staff.Email ?? string.Empty),
+                new Claim(ClaimTypes.Email, staff.Password ?? string.Empty),
+                new Claim(ClaimTypes.Email, staff.Email ?? string.Empty),
+                new Claim(ClaimTypes.Email, staff.Address ?? string.Empty),
             };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(GenerateRandomKeys(512)));
